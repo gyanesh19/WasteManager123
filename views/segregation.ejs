@@ -1,0 +1,57 @@
+<%- include('partials/header5') %>
+<div style="height: 100px;"></div>
+<h1 style="text-align: center;"><%=type%> </h1>
+<form action="/seg" class="form-control" method="post" style="width: auto; margin: 70px;">
+
+
+  <div class="form-group">
+    <label for="fname">First_name</label>
+    <!-- <input type="text"  value="Gyanesh" name="First_name" class="form-control"  placeholder="Enter First name "> -->
+    <input required type="text" value="Gyanesh"  class="form-control" name="fname" >
+    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+  </div>
+
+  <div class="form-group">
+    <label for="lname">Last name</label>
+    <!-- <input type="text"  value="Gyanesh" name="First_name" class="form-control"  placeholder="Enter First name "> -->
+    <input required type="text" value="Gyanesh"  class="form-control" name="lname" >
+    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+  </div>
+  
+
+  <div class="form-group">
+    <label for="address">Address</label>
+    <!-- <input type="text"  value="Gyanesh" name="First_name" class="form-control"  placeholder="Enter First name "> -->
+    <input required type="text" value="xyz"  class="form-control" name="address" >
+    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+  </div>
+
+  <div class="form-group">
+    <label for="address">Email</label>
+    <!-- <input type="text"  value="Gyanesh" name="First_name" class="form-control"  placeholder="Enter First name "> -->
+    <input required type="email" value="xyz@gmail.com"  class="form-control" name="email" >
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+
+  
+  <div class="dropdown">
+   
+    <label for="typeOfWaste">Type of Waste : </label>
+    <select name="typeOfWaste" id="typeOfWaste" required>
+      <option value="select">select</option>
+      <option value="Industrial Waste">Industrial Waste</option>
+      <option value="Commercial  Waste">Commercial  Waste</option>
+      <option value="Domestic Waste">Domestic Waste</option>
+      <option value="Agricultural Waste">Agricultural Waste</option>
+      <option value="Biodegradable Waste">Biodegradable Waste</option>   
+         <option value="Non-Biodegradable Waste">Non-Biodegradable Waste</option>
+ </select>
+  </div>
+ <div class="my-3"></div>
+
+  <input type="hidden"  value="sssssssssss" name="cats" class="form-control" id="" aria-describedby="" placeholder="lname">
+  <input type="hidden"  value="segregation" name="cat" class="form-control" id="" aria-describedby="" placeholder="lname">
+  <button type="submit" class="btn btn-primary y61 border:none; outline: none;" >Segreagte</button>
+</form>
+
+  <%- include('partials/footer') %>

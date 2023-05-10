@@ -1,0 +1,126 @@
+
+
+<%- include('partials/header3') %>
+<div class="" style="height: 100px;"></div>
+<div class="container text-center">
+    <h2>Payment Confirmation</h2>
+    <form action="/feeConf" class="form-control" method="post" style="width: auto;" enctype="multipart/form-data">
+
+        <div class="form-group "  style=" margin: 10px;"> 
+    
+            <label for="file">Name : </label>
+          <input required type="text" name="customername" >
+    
+    
+        
+          </div>
+          
+        <div class="form-group "  style=" margin: 10px;"> 
+    
+            
+    
+            <label for="file">Bank Name : </label>
+            <input required type="text" name="bankname" >
+        
+          </div>
+          <div class="form-group "  style=" margin: 10px;"> 
+    
+            <label for="file">Transaction Id : </label>
+            <input required type="text" name="transactionId" >
+    
+    
+        
+        </div>
+        <div class="form-group "  style=" margin: 10px;"> 
+            <label for="file">Upload reciept : </label>
+            <input type="file" name="file" required id="file" onchange="fileValidation()">
+            <p style="color: grey; " id="nor">*only pdf, and less than 150kb</p>
+            <p style="color:red ;white-space: pre-line; display: none;" id="gre">*file size is greater than 150kb, size : <span id="gh"></span>*</p>          
+            <p style="color: red;display: none;" id="not">*not a pdf file, please select a pdf file*</p>          
+            <p style="color: red;display: none;white-space: pre-line;" id="les">*file size is lesser than 1kb*</p>
+            <p style="color: green;display: none;" id="gree">*Great!!, Picked a good file*</p>
+                 
+    
+    
+        
+        </div>
+        
+    
+      
+            <button type="submit" style="border-radius:18px ;background-color: #059862;color: white;text-align: center;" class="btn ">Request for payment Confirmation </button>
+      
+
+            <input type="text" style="display: none;" name="id" value="<%=id%>">
+
+    </form>
+</div>
+
+
+
+
+<div class="" style="height: 100px;"></div>
+<%- include('partials/footer') %>
+
+
+<script>
+    
+
+
+fileValidation = () => {
+  var fi = document.getElementById('file');
+ var fileType=fi.files[0].type;
+ 
+ 
+  if (fi.files.length > 0) {
+      for (var i = 0; i <= fi.files.length - 1; i++) {  
+          var fsize = fi.files.item(i).size;
+          var file = Math.round((fsize / 1024 ));
+        
+          console.log(file, fileType)
+if(!(fileType ===  "application/pdf" )){
+$("#not").show();
+$("#les").hide();
+$("#nor").hide();
+$("#gre").hide();   
+$("#gree").hide();     
+$("#file").val("");  
+}else{
+
+if (file >= 150) {
+          
+          $("#gre").show();                     
+          document.getElementById('gh').innerHTML =  file + ' KB'; 
+          $("#not").hide();
+          $("#les").hide();
+          $("#nor").hide();
+          $("#gree").hide();  
+          $("#file").val("");                
+        }  
+         else if (file < 1) {
+          $("#les").show();
+          $("#gre").hide();   
+           $("#gree").hide();      
+          $("#not").hide();               
+          $("#nor").hide();
+          $("#file").val("");                   
+        } else {
+          $("#gree").show();   
+           $("#gre").hide();      
+          $("#not").hide();               
+          $("#nor").hide();
+          $("#les").hide();
+          
+        }
+}
+          
+      }
+  }
+
+
+  
+}
+
+</script>
+
+
+

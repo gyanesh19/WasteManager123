@@ -1,0 +1,87 @@
+<%- include('partials/header3') %>
+<div class="" style="height: 100px;"></div>
+<h2 class="text-center" style="font-weight: bold;">Upload Abstract</h2>
+<form action="/abstract" method="post" style="margin: auto ;" enctype="multipart/form-data">
+
+    <div class="form-group text-center"  style="width: 100%; margin: 10px;"> 
+
+        <label for="file">Upload Abstract</label>
+        <input  style="width: fit-content;margin: auto;"  type="file" name="file" id="file" onchange="fileValidation()" class="form-control" required>
+      <p style="color: grey; " id="nor">*only docx, and less than 150kb*</p>
+      <p style="color:red ;white-space: pre-line; display: none;" id="gre">*file size is greater than 150kb ,size : <span id="gh"></span>*</p>          
+      <p style="color: red;display: none;" id="not">*not a docx file, please select a docx file*</p>          
+      <p style="color: red;display: none;white-space: pre-line;" id="les">*file size is lesser than 1kb*</p>
+      <p style="color: green;display: none;" id="gree">*Great!!, Picked a good file*</p>
+    
+      </div>
+      <input type="text" style="display: none;" name="id" value="<%=id%>">
+      <div class="text-center">
+        <button type="submit" style="border-radius:18px ;background-color: #059862;color: white;text-align: center;" class="btn text-center">Upload Abstract</button>
+        <br>
+        <br>
+        <a href="/giveconfirmations/template.docx" style="border-radius:18px ;margin-top: 10px; background-color: #059862;color: white;text-align: center;" class="btn text-center">Download Abstract Template</a>
+      </div>
+  
+      
+</form>
+<div class="" style="height: 100px;"></div>
+  <%- include('partials/footer')%>
+  <script>
+      
+
+
+  fileValidation = () => {
+    var fi = document.getElementById('file');
+   var fileType=fi.files[0].type;
+   
+   
+    if (fi.files.length > 0) {
+        for (var i = 0; i <= fi.files.length - 1; i++) {  
+            var fsize = fi.files.item(i).size;
+            var file = Math.round((fsize / 1024 ));
+          
+            console.log(file, fileType)
+if(!(fileType ===  "application/vnd.openxmlformats-officedocument.wordprocessingml.document")){
+$("#not").show();
+$("#les").hide();
+$("#nor").hide();
+$("#gre").hide();   
+$("#gree").hide();     
+$("#file").val("");  
+}else{
+
+if (file >= 150) {
+            
+            $("#gre").show();                     
+            document.getElementById('gh').innerHTML =  file + ' KB'; 
+            $("#not").hide();
+            $("#les").hide();
+            $("#nor").hide();
+            $("#gree").hide();  
+            $("#file").val("");                
+          }  
+           else if (file < 1) {
+            $("#les").show();
+            $("#gre").hide();   
+             $("#gree").hide();      
+            $("#not").hide();               
+            $("#nor").hide();
+            $("#file").val("");                   
+          } else {
+            $("#gree").show();   
+             $("#gre").hide();      
+            $("#not").hide();               
+            $("#nor").hide();
+            $("#les").hide();
+            
+          }
+}
+            
+        }
+    }
+
+
+    
+}
+
+</script>

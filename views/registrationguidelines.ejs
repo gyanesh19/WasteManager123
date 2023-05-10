@@ -1,0 +1,543 @@
+<%-include('partials/header2')%>
+
+  <section id="main" style="width:100%">
+    <div class="container" style="width: 100%;">
+<div class="conatiner" style="margin-top: 80px;">
+    <div class="section-header " style="text-align:center">
+        <h2>Registration Guidelines</h2>
+  <p>To facilitate the submission process and the subsequent follow-up process, please consider the following guidelines, information, tips, terms and deadlines mentioned. </p>
+      </div>
+      <div>
+        <h3 class="text-center" style="margin-top: 20px;">Guidelines for Abstract Submission</h3>
+          <ul>
+           
+         
+   <li>Abstracts should represent the original work.</li>
+   <li>   Please indicate one - three most relevant themes for your abstract from the conference tracks.</li>
+    <li>The Abstract should be written in English.</li>
+   <li>Please <a href="/giveconfirmations/template.docx" style="color: blue;">download</a>  the abstract template and follow the format carefully.</li>
+ <li> Documents that do not conform to the guidelines will be asked to revise.</li>
+ <li> Documents received after the given deadline, due to any reason will not be accepted unless the deadline is extended.</li>
+ <li>The abstract should be submitted in the format of MS Word (.docx) document. </li>
+ <li>After submission, you will be able to download your fee receipt from your registration portal. </li>
+ 
+  </ul>
+      </div>
+      <h3 class="text-center" style="margin-top: 20px;">Important Dates</h2></div>
+      <div class="container text-center" data-aos="fade-up">
+      
+              <p style="font-weight: bold; margin-bottom: -2px;"> Last date for early bird registration 	&nbsp;&nbsp;&nbsp;&nbsp;<br>	30<sup>th</sup> April 2022</p>
+              <marquee bgcolor="transparent" style="color:red;width:500px;" onmouseover="this.stop()" onmouseout="this.start()"">
+                <p style="color: red; font-weight: bolder;"> <span class="badge bg-danger">*Update*</span> * Early bird registration is now "Closed"  *</p>
+                </marquee>
+              <p style="font-weight: bold; margin-bottom: -2px;">Last date for Abstract Submission &nbsp;&nbsp;&nbsp;&nbsp;<br>	10<sup>th</sup> May 2022</p>
+              <marquee bgcolor="transparent" style="color:red;width:500px;" onmouseover="this.stop()" onmouseout="this.start()"">
+                <p style="color: red; font-weight: bolder;"> <span class="badge bg-danger">*Update*</span> * Last date for Abstract Submission is now extended till&nbsp;	31<sup>st</sup> July 2022 *</p>
+                </marquee>
+              <p style="font-weight: bold; margin-bottom: -2px;">Acceptance of Abstract &nbsp;&nbsp;&nbsp;&nbsp;	<br>up to  30<sup>th</sup> May, 2022 </p>
+              <marquee bgcolor="transparent" style="color:red;width:500px;" onmouseover="this.stop()" onmouseout="this.start()"">
+                <p style="color: red; font-weight: bolder;"> <span class="badge bg-danger">*Update*</span> * Acceptance of Abstract  is now extended till&nbsp; 10<sup>th</sup> August 2022 *</p>
+                </marquee>
+              <p style="font-weight: bold;">Full paper submission &nbsp;&nbsp;&nbsp;&nbsp;<br>	up to  30<sup>th</sup> September, 2022 
+                  ( after the conference)</p>
+        
+      </div>
+
+
+
+<div class="d">
+    <h3 class="text-center" style="margin-top: 20px;">ABOUT THE REVIEWING PROCESS</h3>
+    <ul>
+   
+
+        <li>Your abstract will undergo a double-blind peer review by the International Scientific committee within two to three weeks after its receipt.</li>
+        <li>If a revision is required, the revised abstract must be sent back within a week.</li>
+      
+        <li>
+            If your abstract is accepted, you will be invited to register for the
+            <span style="font-weight:bold"> The 1<sup>st</sup> International Conference on Organic Electronics 2022 (ICOE 2022).</span></li>
+  
+    </ul>
+</div>
+
+
+<div class="">
+    <h3 class="text-center" style="margin-top: 20px;">IMPORTANT INFORMATION FOR THE CO-AUTHORS</h3>
+    <ul>
+      
+        <li>Please note a single registration permits only one person to attend the conference</li>
+        <li>If the co-authors would like to attend the conference their registration and payment are required to be made independently.
+        </li>
+        <li>The certificate will be issued for the co-authors upon their registration/payment for the conference.</li>
+       
+    </ul>
+</div>
+<section id="form">
+<div class="conatiner my-3">
+  <form action="/registers"  method="POST" id="my_form">
+<div class="container mt-5">
+  
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card y6 y61">
+        <div class="card-body ">
+
+          <!-- Makes POST request to /register route -->
+    
+            <div class="form-group" >
+            
+              <h1 style="margin-top: 10px;" class="">Register here</h1>
+              <% if (message.length > 0) { %>
+               
+                <div class="alert alert-danger alert-dismissible fade show text-center" style="padding:0%;white-space: pre-line;height: 98px;"  role="alert">
+             <p class="text-center" style="margin-top: -14px;">Alert!! <br> <%=message%></p>
+                  <button type="button" class="btn-close" style="height: 20px; width: 20px;" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            
+               
+                
+                
+                        <%    } %> 
+              <label for="fname">First Name</label>
+              <input  required type="text"   class="form-control" name="fname"   >
+            </div>
+            <div class="form-group">
+            
+              <label for="lname">Last Name <span style="color: red;" >(*optional*)</span></label>
+              <input   uniq class="form-control" name="lname"  placeholder="last name ">
+            </div>
+
+          
+            <div class="form-group sameLine">
+              <div class="form-group sameLine col-lg-4 col-md-4 col-sm-12 ">
+                 
+                <label class="col-lg-12 col-md-12 col-sm-12"> Gender  </label>
+                <select required name="gender"   style="width: 110px;"   class="form-control" >
+                  <option value="" selected disabled hidden>select</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Transgender">Transgender</option>
+                  <option value="Don't wish to dis">Don't wish to dis</option>
+                </select>
+            
+               </div>
+               </div>
+
+   
+               <div class="form-group ">
+                <label >Date of Birth</label>
+                <input  class="form-control capitalize e" type="date" onfocus="blur()" onkeydown="return false;"  name="dob" placeholder=""    autocomplete="off">
+               </div>
+              
+
+            <div class="form-group">
+            
+              <label for="email">Email</label>
+              <input required type="email" uniq class="form-control" name="username" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" title="2019530784.name@ug.ac.sharda.ac.in" placeholder="" >
+            </div>
+
+            <div class="form-group ">
+     
+              <label  > Contact No </label>
+              <input required
+              
+              class="form-control e"
+              name="contact"
+         oninvalid="this.setCustomValidity('Enter contact number with pin ')"
+         oninput="this.setCustomValidity('')"  
+         type = "number"
+       min="999999999"
+       title="Enter valid phone number"
+       max="999999999999999"
+         placeholder="Your Contact no" >
+          </div>
+
+          <div class="form-group">
+            
+            <label for="adress">Address</label>
+            <input required  uniq class="form-control" name="address"  placeholder="address ">
+          </div>
+
+          <div class="form-group">
+            
+            <label for="Designation">Designation</label>
+            <input required  uniq class="form-control" name="designation"  placeholder="Designation ">
+          </div>
+          
+       
+        
+
+          <div class="form-group sameLine col-lg-4 col-md-4 col-sm-12 ">
+     
+            <label  > Qualification  </label>
+            <select required name="qualification" id="" class="form-control"  >
+              <option value="" selected disabled hidden>select</option>
+          
+              <option value="Completed PhD">Completed PhD</option>
+              <option value="Pursuing PhD">Pursuing PhD</option>
+              <option value="Not Started">Not Started</option>
+              <option value="Other">Other</option>
+            
+             
+            </select>
+        
+           </div>
+
+           <div class="col-lg-12 col-md-12">
+
+            <div class="form-group col-lg-12 col-md-12 col-sm-12" id="otherFieldDiv"  >
+              <label for="otherField">Registration/Completion Year of PhD </label>
+              <input class="form-control" id="otherField" name="registrationCompletionYear" value="">
+            <span style="color:grey">*if not started or other then fill NA*</span>
+            </div>
+            <br> 
+           </div>
+          
+           <div class="col-lg-12 col-md-12">
+
+            <div class="form-group col-lg-12 col-md-12 col-sm-12" id="otherFieldDiv1" >
+              <label for="otherField1">Research Interest </label>
+              <input class="form-control" id="otherField1" name="researchAbstract" value="">
+            </div>
+          
+           </div>
+
+         
+
+
+        
+
+          <div class="form-group">
+            
+            <label for="Institute Name/Organization">Institute/Organization Name</label>
+            <input required  uniq class="form-control" name="organisationName" >
+          </div>
+
+          <div class="form-group">
+            
+            <label for="Department">Department</label>
+            <input required  uniq class="form-control" name="branch"  placeholder="Department ">
+          </div>
+          <div class="form-group">
+            
+            <label for="Institute/Organization Address">Institute/Organization Address</label>
+            <input required  uniq class="form-control" name="OrganizationAddress"  >
+          </div>
+          <div class="form-group">
+            
+            <label for="Institute/Organization City">Institute/Organization City</label>
+            <input required  uniq class="form-control" name="OrganizationCity"  >
+          </div>
+<div class="form-group">
+          <label for="Institute/Organization Pincode">Institute/Organization Pincode</label>
+          <input required  uniq class="form-control" name="OrganizationPincode"  >
+        </div>
+
+      
+
+            <div class="form-group" style="width: 100%; margin: 5px;">
+              <label for="password">Password</label>
+              <input required type="password" class="form-control"  id="pwdText" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain Atleast one number and one uppercase and lowercase letter, Aleast 8 or more characters"  name="password">
+      
+            </div>
+            <div class="form-group" style="width: 100%; margin: 5px;">
+              <label for="password">Confirm Password</label>
+              <input required type="password"  id="pwdText2" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain Atleast one number and one uppercase and lowercase letter, Aleast 8 or more characters"  class="form-control" name="password2">
+              <input type="checkbox" onclick="myFunction()" style="padding-top: 2px;"> Show Password
+            </div>
+
+         
+            <button type="submit" style="background-color: #019961;border:none; outline: none; width: 100%;" class=" btn btn-primary y61 ">Register</button>
+            <br>
+            <div class="text-center">
+              <span  style="margin-top: 10px;color: #333E68;margin-bottom: 10px;" class="text-center"> Already regsitered ?  then try Login</span>
+            </div>
+         
+            <div class="text-center"> <a href="/login" style="background-color: #019961;border:none; outline: none;width: 80%; margin-top: 5px;" class=" btn btn-primary y61 text-center">Log In</a></div>
+      
+            
+          </form>
+         
+         
+        
+        </div></section>
+
+        
+     
+<div class="container" style="height: 20px;"></div>
+    <!-- =======  F.A.Q Section ======= -->
+
+    <div class="container">  <section id="faq">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>FAQ<span style="text-transform: lowercase;">s</span> </h2>
+        </div>
+<h3 class="text-center" style="margin-top: 20px;">Related to Abstract Submission</h3>
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-9">
+
+            <ul class="faq-list" style="list-style-type: none;">
+<!-- ======================================================================================================== -->
+              <li>
+                <div data-bs-toggle="collapse" class="collapsed question" href="#faq8">Can I submit an abstract outside of the mentioned research themes and sub-topics? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq8" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                      If your abstract is related to the field of conference title you can still submit the abstract. The selection of your paper will be decided by the scientific reviewing committee of the Conference.
+                  </p>
+                </div>
+              </li>
+<!-- ======================================================================================================== -->
+          
+<li>
+  <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Can we add more then one author to the abstract? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+  <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+    <p>
+      Yes. You can.
+    </p>
+  </div>
+</li>
+<!-- ======================================================================================================== -->
+<li>
+  <div data-bs-toggle="collapse" class="collapsed question" href="#faq2"> 
+      <!-- ------ --> How many papers can one person present?
+      <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+  <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+    <p>
+     <!-- ------ -->Maximum three papers can be presented by a person.
+    </p>
+  </div>
+</li>
+<!-- ======================================================================================================== -->
+<li>
+  <div data-bs-toggle="collapse" class="collapsed question" href="#faq3"> 
+      <!-- ------ --> How many people can present a paper at the conference?
+      <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+  <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+    <p>
+     <!-- ------ -->This is not limited. But all the presenters must register to the conference by paying the registration fee.
+    </p>
+  </div>
+</li>
+<!-- ======================================================================================================== -->
+<li>
+  <div data-bs-toggle="collapse" class="collapsed question" href="#faq4"> 
+      <!-- ------ --> Do I have to pay for all papers if I wish to present more then one paper?
+      <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+  <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+    <p>
+     <!-- ------ -->Yes. If you are presenting more then one paper at the conference;
+     <ul>
+         <li>You have to pay the full amount for the first paper.</li>
+         <li>Confirmation on the number of papers should be given to the Conference Secretary two weeks prior to the final payment deadline.</li>
+     </ul>
+    </p>
+  </div>
+</li>
+<!-- ======================================================================================================== -->
+<li>
+  <div data-bs-toggle="collapse" class="collapsed question" href="#faq5"> 
+      <!-- ------ --> How many co-author names can be included in a paper?
+      <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+  <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+    <p>
+     <!-- ------ -->All the co-authors who have contributed to the paper/abstract can be included.
+    </p>
+  </div>
+</li>
+<!-- ======================================================================================================== -->
+<li>
+  <div data-bs-toggle="collapse" class="collapsed question" href="#faq6"> 
+      <!-- ------ --> Can we get a certificate for co-authors?
+      <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+  <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+    <p>
+     <!-- ------ -->Yes, If the co-author has registered and paid the conference fee, he/she can get the certificate. Please inform the conference secretariat regarding this before two weeks to the conference.
+    </p>
+  </div>
+</li>
+<!-- ======================================================================================================== -->
+<li>
+  <div data-bs-toggle="collapse" class="collapsed question" href="#faq7"> 
+      <!-- ------ --> How many words should the abstract have?
+      <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+  <div id="faq7" class="collapse" data-bs-parent=".faq-list">
+    <p>
+     <!-- ------ -->The acceptable word range for the abstract is 150-250 words. The abstracts which do not meet this word limit will be asked for revisions.
+    </p>
+  </div>
+</li>
+<!-- ======================================================================================================== -->
+
+<!-- ======================================================================================================== -->
+
+            </ul>
+<h3></h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </section><!-- End  F.A.Q Section --></div>
+  
+ 
+     
+
+<div class="d" style="height: 60px;"></div>
+</section>
+<%-include('partials/footer')%>
+
+<script>
+  function myFunction() {
+  var x = document.getElementById("pwdText");
+  var y = document.getElementById("pwdText2");
+  if (x.type && y.type === "password") {
+    x.type = "text";
+    y.type = "text";
+  } else {
+    x.type = "password";
+    y.type = "password";
+  }
+}
+
+
+//     $("#departuress").datepicker({  
+//   showAnim: "slideDown",
+//    changeYear: true,
+//    numberOfMonths: 1,
+//   dateFormat: "dd-mm-yy",
+
+//   onClose: function(selectedDate){
+//       $("#return").datepicker("option", selectedDate)
+//   },
+//    showWeek: true,
+// });
+fileValidation = () => {
+        var fi = document.getElementById('file');
+       var fileType=fi.files[0].type;
+       
+       
+        if (fi.files.length > 0) {
+            for (var i = 0; i <= fi.files.length - 1; i++) {  
+                var fsize = fi.files.item(i).size;
+                var file = Math.round((fsize / 1024 ));
+              
+                console.log(file, fileType)
+if(!(fileType ===  "application/vnd.openxmlformats-officedocument.wordprocessingml.document")){
+  $("#not").show();
+  $("#les").hide();
+  $("#nor").hide();
+  $("#gre").hide();   
+   $("#gree").hide();     
+  $("#file").val("");  
+}else{
+
+  if (file >= 200) {
+                
+                $("#gre").show();                     
+                document.getElementById('gh').innerHTML =  file + ' KB'; 
+                $("#not").hide();
+                $("#les").hide();
+                $("#nor").hide();
+                $("#gree").hide();  
+                $("#file").val("");                
+              }  
+               else if (file < 1) {
+                $("#les").show();
+                $("#gre").hide();   
+                 $("#gree").hide();      
+                $("#not").hide();               
+                $("#nor").hide();
+                $("#file").val("");                   
+              } else {
+                $("#gree").show();   
+                 $("#gre").hide();      
+                $("#not").hide();               
+                $("#nor").hide();
+                $("#les").hide();
+                
+              }
+}
+                
+            }
+        }
+
+
+        
+    }
+
+
+
+
+
+var $myForm = $("#my_form");
+$myForm.submit(function(){
+    $myForm.submit(function(){
+        return false;
+    });
+});
+
+
+  function pop(){
+    $("#s").show();
+  }$("#seeAnotherField").change(function() {
+  if ($(this).val() === "Pursuing PhD" || $(this).val() === "Completed PhD") {
+    $('#otherFieldDiv').show();
+    $('#otherField').attr('required', '');
+    $('#otherField').attr('data-error', 'This field is required.');
+
+    $('#otherFieldDiv1').show();
+    $('#otherField1').attr('required', '');
+    $('#otherField1').attr('data-error', 'This field is required.');
+
+    $('#otherFieldDiv2').show();
+    $('#otherField2').attr('required', '');
+    $('#otherField2').attr('data-error', 'This field is required.');
+
+    $('#otherFieldDiv3').show();
+    $('#otherField3').attr('required', '');
+    $('#otherField3').attr('data-error', 'This field is required.');
+
+    $('#otherFieldDiv4').show();
+    $('#otherField4').attr('required', '');
+    $('#otherField4').attr('data-error', 'This field is required.');
+
+
+  } else {
+
+    $('#otherFieldDiv').hide();
+    $('#otherField').val('')
+    $('#otherField').removeAttr('required');
+    $('#otherField').removeAttr('data-error');
+
+    $('#otherFieldDiv1').hide();
+    $('#otherField1').val('')
+    $('#otherField1').removeAttr('required');
+    $('#otherField1').removeAttr('data-error');
+
+    $('#otherFieldDiv2').hide();
+    $('#otherField2').val('')
+    $('#otherField2').removeAttr('required');
+    $('#otherField2').removeAttr('data-error');
+
+    $('#otherFieldDiv3').hide();
+    $('#otherField3').val('')
+    $('#otherField3').removeAttr('required');
+    $('#otherField3').removeAttr('data-error');
+
+    $('#otherFieldDiv4').hide();
+    $('#otherField4').val('')
+    $('#otherField4').removeAttr('required');
+    $('#otherField4').removeAttr('data-error');
+
+
+  }
+});
+$("#seeAnotherField").trigger("change");
+    
+</script>
+
+
+

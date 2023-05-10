@@ -1,0 +1,144 @@
+
+<%- include('partials/header4') %>
+<style>
+  p{
+    margin-top: -25px;
+  }
+</style>
+
+
+
+
+
+   <div class="" style="height: 100px;"></div>
+   <div class="text-center" style="font-weight: bolder; margin-bottom: 20px;">Total Payment Request  : <%=Applicants%></div>
+   
+<div class="container" id="len2" >
+  <% if (message.length > 0) { %>
+               
+    <div class="alert alert-success alert-dismissible fade show text-center" style="padding:0%;white-space: pre-line;height: 55px;"  role="alert">
+     <p class="text-center" style="    margin-top: -9px;">  <span style="font-weight: bold;">Success</span>, <%=message%></p>
+      <button type="button" class="btn-close" style="height: 20px; width: 20px;" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  
+   
+    
+    
+            <%    } %> 
+ 
+  <div class="row">
+    <%  posts.forEach(function(post){ %>
+  
+        
+        <div class="card " id="len2" >
+          <div class="card-body" id="len">
+            <div class="col-lg-4" style="margin-bottom: 10px;">
+            <%  if(post.customername.length>=20){  %>
+      
+                 
+              <h3 class="text-center" style="background-color: #059862;color: white;" ><%=post.customername.substring(0, 19)%>..</h3>
+        
+                          <%    } else{%> 
+        <h3 class="text-center" style="background-color: #059862;color: white;" ><%=post.customername%></h3>
+                                 
+                             
+                            <%    } %> 
+                
+                           
+                                        <p id="b" style="margin-top: -15px;  " >Fee Status :  <span class="badge bg-primary"><%=post.feeStatus%></span></p>
+                                    
+        
+        <p style="margin-top: -15px;"><i class="far fa-play-circle "></i> Bank Name : <%=post.bankname.substring(0, 17)%></p>
+        
+        
+        <p  id="fe4" class="capitalize"><i class="far fa-hand-point-right"></i> Transaction Id : <%= post.transactionId%></p>
+        
+        <p  id="fe5"><i class="far fa-pause-circle"></i> Contact : <%=post.contact%></p>
+        <p  id="fe5"><i class="far fa-pause-circle"></i> Payment Reciept : <a target="_blank" href="<%=post.receipt%>">click here</a></p>
+  
+
+        <form action="/giveconfi/<%=post._id%>" method="post">
+          <input type="text" style="display: none;" name="eventId" value="<%=post.eventId%>">
+          <input type="text" style="display: none;" name="names" value="<%=post.fname%>">
+          <input type="text" style="display: none;" name="email" value="<%=post.email%>">
+          <input type="text" style="display: none;" name="eventname" value="<%=post.eventname%>">
+          <button type="submit" style="border-radius:18px ;background-color: #059862;color: white;text-align: center; margin-top: -25px;" class="btn text-center">Confirm Request</button>
+
+        </form>
+        
+   
+            
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    
+    </div>
+   
+    
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<p id="para3" class=" text-center" style="font-weight: bolder;  margin-top: 75px;">No Pending Requests!!!</p>
+
+
+<div style="text-align: center;margin-bottom: -71px;" class="pagi text-center">
+  <% if (pages > 0) { %>
+  <ul class="pagination justify-content-center" style="text-align: center;">
+    <% if (current == 1) { %>
+      <li class="page-item disabled"><a class="page-link">First</a></li>
+  <% } else { %>
+      <li><a class="page-link" href="/<%=home%>?<%=homes%>page=1">First</a></li>
+  <% } %>
+  <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+  <% if (i !== 1) { %>
+      <li class="page-item disabled"><a>...</a></li>
+  <% } %>
+  <% for (; i <= (Number(current) + 4) && i <= pages; i++) { %>
+      <% if (i == current) { %>
+          <li class="page-item active"><a class="page-link"><%= i %></a></li>
+      <% } else { %>
+          <li><a class="page-link" href="/<%=home%>?<%=homes%>page=<%= i %>"><%= i %></a></li>
+      <% } %>
+      <% if (i == Number(current) + 4 && i < pages) { %>
+          <li class="page-item disabled"><a class="page-link">...</a></li>
+      <% } %>
+  <% } %>
+  <% if (current == pages) { %>
+      <li class="page-item disabled"><a class="page-link">Last</a></li>
+  <% } else { %>
+      <li><a class="page-link" href="/<%=home%>?<%=homes%>page=<%= pages %>">Last</a></li>
+  <% } %>
+  </ul>
+  <% } %>
+</div>  
+<div class="" style="height: 100px;"></div>
+
+<%- include('partials/footer') %>
+
+<script>
+  $(function(){
+  
+var l =$('#len').length;
+var ll =$('#len2').length;
+var lll =$('#len3').length;
+console.log(l + "me" + ll + " "+ lll)
+if(l === 0){
+
+  
+   $("#para3").show();
+}else{
+  $("#para3").hide();
+}
+  })
+</script>

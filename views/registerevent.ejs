@@ -1,0 +1,129 @@
+
+<%- include('partials/header3') %>
+<div class="" style="height: 100px;"></div>
+
+<div class="">
+    <p style="font-size:xx-large; font-weight: bolder;" class="text-center">Register for the Event</p>
+
+    <div class=" container" style="font-weight: bold; border-width: 2px;">
+        
+        <div class="row">
+            <% if (message.length > 0) { %>
+               
+                <div class="alert alert-danger alert-dismissible fade show text-center"  role="alert">
+                  <strong>Alert! </strong> <%=message%>
+                  <button type="button" class="btn-close" style="height: 20px; width: 20px;" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            
+               
+                
+                
+                        <%    } %> 
+                       
+            <%  docs.forEach((doc)=>{%>
+               
+                <div class="col-lg-6">
+                    <div class="card " >
+                        <div class="card-body">
+                            
+                         
+                            
+  <div >
+    <%    if(55>=doc.eventname.toString().length){%> 
+    <p style="font-weight: bold; color: #059862; font-size: large;    height: 50px;"><%=doc.eventname%></p>
+    <%  }  else{%> 
+        <p style="font-weight: bold; color: #059862; font-size: small;    height: 50px;"><%=doc.eventname%></p> 
+        <%    } %> 
+    
+
+                    </div> 
+                    <p style="font-weight: lighter;"> 
+                    From: <%=doc.from%> <br>  
+                        
+                    To: <%=doc.to%> <br>
+                    Mode: <%=doc.mode%> <br>
+               
+                    Abstract Submission Deadline  : <%=doc.abslast%> <br>
+Full Paper Submission Deadline : <%=doc.fplast%> <br>
+Event Regsitration Deadline   : <%=doc.eventdeadline%> <br></p>
+                <form action="/registerevent" method="post" id="my_form">
+                    <input name="id" style="display: none;" value="<%=doc._id%>"></input>
+                    <input name="eventname" type="text" value="<%=doc.eventname%>" style="display: none;">
+                    <input name="from" type="text" value="<%=doc.from%>" style="display: none;">
+                    <input name="to" type="text" value="<%=doc.to%>" id="last" style="display: none;">
+                    <input name="mode" type="text" value="<%=doc.mode%>" style="display: none;">
+                    <input name="eventdeadline" type="text" value="<%=doc.eventdeadline%>" style="display: none;">
+                    <input name="abslast" type="text" value="<%=doc.abslast%>" style="display: none;">
+                    <input name="fplast" type="text" value="<%=doc.fplast%>" style="display: none;">
+                    
+                  
+                    <div class="text-center"><button type="submit" id="hide"  style="border-radius:18px ;background-color: #059862;color: white;text-align: center;" class="btn text-center">Register</button></div>
+            
+                </form>
+                </div></div>
+            </div>
+           
+                <%  })%>
+            </div>
+        </div>
+       
+</div>
+
+<div style="text-align: center; margin-top: 20px;" class="pagi text-center">
+    <% if (pages > 0) { %>
+    <ul class="pagination justify-content-center" style="text-align: center;">
+      <% if (current == 1) { %>
+        <li class="page-item disabled"><a class="page-link">First</a></li>
+    <% } else { %>
+        <li><a class="page-link" href="/<%=home%>?<%=homes%>page=1">First</a></li>
+    <% } %>
+    <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+    <% if (i !== 1) { %>
+        <li class="page-item disabled"><a>...</a></li>
+    <% } %>
+    <% for (; i <= (Number(current) + 4) && i <= pages; i++) { %>
+        <% if (i == current) { %>
+            <li class="page-item active"><a class="page-link"><%= i %></a></li>
+        <% } else { %>
+            <li><a class="page-link" href="/<%=home%>?<%=homes%>page=<%= i %>"><%= i %></a></li>
+        <% } %>
+        <% if (i == Number(current) + 4 && i < pages) { %>
+            <li class="page-item disabled"><a class="page-link">...</a></li>
+        <% } %>
+    <% } %>
+    <% if (current == pages) { %>
+        <li class="page-item disabled"><a class="page-link">Last</a></li>
+    <% } else { %>
+        <li><a class="page-link" href="/<%=home%>?<%=homes%>page=<%= pages %>">Last</a></li>
+    <% } %>
+    </ul>
+    <% } %>
+  </div>  
+<div class="" style="height: 100px;"></div>
+<%- include('partials/footer') %>
+<script>
+    
+
+  var todaysDate = new Date();
+
+function convertDate(date) {
+  var yyyy = date.getFullYear().toString();
+  var mm = (date.getMonth()+1).toString();
+  var dd  = date.getDate().toString();
+
+  var mmChars = mm.split('');
+  var ddChars = dd.split('');
+
+  return yyyy + '-' + (mmChars[1]?mm:"0"+mmChars[0]) + '-' + (ddChars[1]?dd:"0"+ddChars[0]);
+}
+
+
+
+
+    var $myForm = $("#my_form");
+$myForm.submit(function(){
+    $myForm.submit(function(){
+        return false;
+    })
+})
+</script>

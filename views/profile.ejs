@@ -1,0 +1,38 @@
+
+<%- include('partials/header3') %>
+<div class="" style="height: 100px;"></div>
+
+<h2 style="font-weight: bold;text-align: center;">Profile</h2>
+<% if (message.length > 0) { %>
+               
+  <div class="alert alert-success alert-dismissible fade show text-center" style="padding:0%;white-space: pre-line;height: 55px;"  role="alert">
+   <p class="text-center" style="    margin-top: -9px;">  <span style="font-weight: bold;">Success</span>, <%=message%></p>
+    <button type="button" class="btn-close" style="height: 20px; width: 20px;" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+ 
+  
+  
+          <%    } %> 
+
+<div class="card " style="width: 18rem; margin:auto">
+    <strong></strong>
+  <div class="card-body">
+    <h5 class="card-title">  Name  : <%=name%>  <%=lname%></h5>
+    <h6 class="card-subtitle mb-2 text-muted">  <strong>email</strong>  : <%=email%></h6>
+    <h6 class="card-subtitle mb-2 text-muted">  <strong>Contact</strong>  : <%=contact%></h6>
+    <h6 class="card-subtitle mb-2 text-muted">  <strong>Research Interest</strong>  : <%=researchAbstract%></h6>
+    <h6 class="card-subtitle mb-2 text-muted">  <strong>Designation</strong>  : <%=designation%></h6>
+
+    <h6 class="card-subtitle mb-2 text-muted">  <strong>Qualification</strong>  : <%=qualification%></h6>
+    <h6 class="card-subtitle mb-2 text-muted">  <strong>Organization Name</strong>   : <%=organisationName%></h6>
+    <a href="/editprofile">Edit Profile</a>
+
+    <p class="card-text"></p>
+ 
+  </div>
+</div>
+</div>
+
+<div class="" style="height: 100px;"></div>
+<%- include('partials/footer') %>

@@ -1,0 +1,79 @@
+<%- include('partials/header2') %>
+<div class="" style="height: 35px;"></div>
+<div class="container mt-5">
+ 
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card y6 y61">
+        <div class="card-body"  style="width: 100%;">
+
+       
+          <form action="/login" method="POST" >
+            <div class="form-group">
+              <%  if(typeof err != 'undefined' && err.length >0){  %>
+               
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <strong>Error, </strong> <%= err %>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+               
+                
+                
+                        <%    } %> 
+              <h1 class="">  Log In </h1>
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="username" >
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="pwdText" class="form-control" name="password" required>
+              <input type="checkbox" onclick="myFunction()"> Show
+              
+            </div>
+            <button type="submit" class="btn btn-primary y61 " style="background-color: #059862;color: white;border:none; outline: none;">Log In</button>
+            <a href="/forgot-password" style="float: right;">forgotten-password</a>
+          </form>
+         
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4 col-lg-8 col-md-6 gig">
+      <div class=" g0 cen0">
+        <div class="card-body">
+         
+          <p style="text-align: center; margin: auto;font-family: ubuntu; font-weight: bold;">OR</p>
+        <div class="col-sm-8 col-lg-12 col-md-10 gig">
+          <div class=" cen0">
+           
+            <a href="/registrationguidelines#form" class="btn btn-primary btn-block buts" type="submit"  style="background-color: #059862;color: white;border:none; outline: none;">Register</a>
+       
+          </div>
+          </div>
+        </div>
+         
+        </div>
+      </div>
+     
+    </div>
+    
+
+
+
+  </div>
+
+
+<%- include('partials/footer') %>
+
+<script>
+  function myFunction() {
+  var x = document.getElementById("pwdText");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>

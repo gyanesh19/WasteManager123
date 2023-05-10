@@ -1,0 +1,41 @@
+<%- include('partials/header5') %>
+<div class="" style="height: 100px;"></div>
+<h1 style="text-align: center;">Requests For Transportation </h1>
+<div  class="row" style="margin: 1%;">
+ 
+    <%  posts.forEach(function(post){ %>
+     
+
+         <div class="col-lg-4 col-md-6 my-1" style="margin: 0%;" id="len">
+           <div class="card inside" >
+                
+    
+ 
+           
+         
+            <ul class="capitalize" style="list-style-type: none;" >
+      
+                <li class="capitalize"><%=post.fname%></li>
+             <li >Last Name :  <span style="text-transform: uppercase;"><%=post.lname%>..</span></li>      
+                 <li >Address : <%=post.address%>..</li>    
+                 <li>Email : <%=post.contact%></li> 
+               <li>Type Of Waste : <%=post.type%></li>
+          
+    
+                    
+        
+                       
+             </ul>
+            </div>   
+         
+         </div>
+  
+
+
+
+            <%});%>  
+      
+    </div>
+ 
+     
+   <%- include('partials/footer') %>
