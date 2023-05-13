@@ -1,0 +1,3146 @@
+/**
+* Template Name: TheEvent - v4.7.0
+* Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  background: #fff;
+  color: #2f3138;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: #019961;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover, a:active, a:focus {
+  color: #f8234a;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+.comPara p{
+  margin:2px;
+}
+.comPara h2{
+ color: #019961;
+
+}
+
+.imageResizer img{
+  height: 237px;
+  width: 100%;
+}
+.imageResizer2{
+  height: 237px;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+  color: #0e1b4d;
+}
+
+.main-page {
+  margin-top: 70px;
+}
+
+/* Prelaoder */
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #fff url("../img/preloader.svg") no-repeat center center;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #019961;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+.back-to-top:hover {
+  background: #f94a6a;
+  color: #fff;
+}
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Sections Header
+--------------------------------*/
+.section-header {
+  margin-bottom: 60px;
+  position: relative;
+  padding-bottom: 20px;
+}
+.section-header::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: #019961;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+.section-header h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.hmim{
+  border: none;
+   font-family:ubuntu;
+    font-weight: bold;
+}
+.section-header p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #9195a2;
+}
+
+.section-with-bg {
+  background-color: #f6f7fd;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  height: 90px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+#header.header-scrolled, #header.header-inner {
+  background: rgba(6, 12, 34, 0.98);
+  height: 70px;
+}
+#header #logo h1 {
+  font-size: 36px;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+#header #logo h1 span {
+  color: #019961;
+}
+#header #logo h1 a, #header #logo h1 a:hover {
+  color: #fff;
+}
+#header #logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
+}
+@media (max-width: 992px) {
+  #header #logo img {
+    max-height: 30px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Buy Tickets
+--------------------------------------------------------------*/
+.buy-tickets {
+  color: #fff;
+  background: #019961;
+  padding: 7px 22px;
+  margin: 0 0 0 15px;
+  border-radius: 50px;
+  border: 2px solid #019961;
+  transition: all ease-in-out 0.3s;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.buy-tickets:hover {
+  background: none;
+  color: #fff;
+}
+.buy-tickets:focus {
+  color: #fff;
+}
+@media (max-width: 992px) {
+  .buy-tickets {
+    margin: 0 15px 0 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.navbar li {
+  position: relative;
+}
+.navbar > ul > li {
+  white-space: nowrap;
+  padding: 10px 0 10px 12px;
+}
+.navbar a, .navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(202, 206, 221, 0.8);
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: 0.3s;
+  position: relative;
+  padding: 6px 4px;
+}
+.navbar a i, .navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+.navbar > ul > li > a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: #019961;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out 0s;
+}
+.navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
+  visibility: visible;
+  width: 100%;
+}
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  color: #fff;
+}
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 12px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: none;
+  color: #060c22;
+}
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+.navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
+  color: #019961;
+}
+.navbar .dropdown:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+.navbar .dropdown .dropdown:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+  .navbar .dropdown .dropdown:hover > ul {
+    left: -100%;
+  }
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+}
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+.navbar-mobile > ul > li {
+  padding: 0;
+}
+.navbar-mobile a:hover:before, .navbar-mobile li:hover > a:before, .navbar-mobile .active:before {
+  visibility: hidden;
+}
+.navbar-mobile a, .navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #060c22;
+}
+.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+  color: #019961;
+}
+.navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
+.navbar-mobile .dropdown ul {
+  position: static;
+  display: none;
+  margin: 10px 20px;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+.navbar-mobile .dropdown ul li {
+  min-width: 200px;
+}
+.navbar-mobile .dropdown ul a {
+  padding: 10px 20px;
+}
+.navbar-mobile .dropdown ul a i {
+  font-size: 12px;
+}
+.navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+  color: #019961;
+}
+.navbar-mobile .dropdown > .dropdown-active {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+#hero:before {
+  content: "";
+  background: rgba(6, 12, 34, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 90px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 15px;
+}
+@media (max-width: 991px) {
+  #hero .hero-container {
+    top: 70px;
+  }
+}
+#hero h1 {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#hero h1 span {
+  color: #019961;
+}
+@media (max-width: 991px) {
+  #hero h1 {
+    font-size: 34px;
+  }
+}
+#hero p {
+  color: #ebebeb;
+  font-weight: 700;
+  font-size: 20px;
+}
+@media (max-width: 991px) {
+  #hero p {
+    font-size: 16px;
+  }
+}
+#hero .play-btn {
+  width: 94px;
+  height: 94px;
+  background: radial-gradient(#019961 50%, rgba(101, 111, 150, 0.15) 52%);
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+#hero .play-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 100;
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+#hero .play-btn:before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation: pulsate-btn 2s;
+  animation: pulsate-btn 2s;
+  -webkit-animation-direction: forwards;
+  animation-direction: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 2px solid rgba(163, 163, 163, 0.4);
+  top: -15%;
+  left: -15%;
+  background: rgba(198, 16, 0, 0);
+}
+#hero .play-btn:hover::after {
+  border-left: 15px solid #019961;
+  transform: scale(20);
+}
+#hero .play-btn:hover::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 200;
+  -webkit-animation: none;
+  animation: none;
+  border-radius: 0;
+}
+#hero .about-btn {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  margin: 10px;
+  background-color: #019961;
+  background: #019961;
+  color: #fff;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  border: 2px solid #019961;
+}
+#hero .about-btn:hover {
+  background:transparent ;
+  
+}
+
+@-webkit-keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+#about {
+  background: url("../img/about-bg.jpg");
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding: 60px 0 40px 0;
+}
+@media (min-width: 1024px) {
+  #about {
+    background-attachment: fixed;
+  }
+}
+#about:before {
+  content: "";
+  background: rgba(13, 20, 41, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#about h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+#about h3 {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #fff;
+}
+#about p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Speakers Section
+--------------------------------------------------------------*/
+#speakers {
+  padding: 60px 0 30px 0;
+}
+#speakers .speaker {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+#speakers .speaker .details {
+  background: rgba(6, 12, 34, 0.76);
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  right: 0;
+  text-align: center;
+  padding-top: 10px;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#speakers .speaker .details h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+#speakers .speaker .details p {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+#speakers .speaker .details .social {
+  height: 40px;
+}
+#speakers .speaker .details .social i {
+  line-height: 0;
+  margin: 0 10px;
+}
+#speakers .speaker .details a {
+  color: #fff;
+}
+#speakers .speaker .details a:hover {
+
+  color: #019961;
+}
+
+#speakers .speaker:hover .details {
+  bottom: 0;
+  height: 128px;
+}
+
+#speakers .speaker:hover .detailss {
+  bottom: 0;
+  height:162px;
+}
+#speakers .speaker:hover .detailsss {
+  bottom: 0;
+  height:110px;
+}
+#speakers-details {
+  padding: 60px 0;
+}
+#speakers-details .details h2 {
+  color: #112363;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+#speakers-details .details .social {
+  margin-bottom: 15px;
+}
+#speakers-details .details .social a {
+  background: #e9edfb;
+  color: #112363;
+  line-height: 1;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconImage{
+  background: #019961;
+  color: #fff;
+  border-radius: 50%;
+  
+}
+.iconImage2{
+  width: 24px;
+  height: 24px;
+  background: #019961;
+
+  
+}
+
+#speakers-details .details .social a:hover {
+  background: #019961;
+  color: #fff;
+ 
+
+}
+#speakers-details .details .social a i {
+  font-size: 16px;
+  line-height: 0;
+}
+#speakers-details .details p {
+  color: #112363;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/*--------------------------------------------------------------
+# Schedule Section
+--------------------------------------------------------------*/
+#schedule {
+  padding: 60px 0 60px 0;
+}
+#schedule .nav-tabs {
+  text-align: center;
+  margin: auto;
+  display: block;
+  border-bottom: 0;
+  margin-bottom: 30px;
+}
+#schedule .nav-tabs li {
+  display: inline-block;
+  margin-bottom: 0;
+}
+#schedule .nav-tabs a {
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  background-color: #0e1b4d;
+  color: #fff;
+  padding: 10px 100px;
+}
+@media (max-width: 991px) {
+  #schedule .nav-tabs a {
+    padding: 8px 60px;
+  }
+}
+@media (max-width: 767px) {
+  #schedule .nav-tabs a {
+    padding: 8px 50px;
+  }
+}
+@media (max-width: 480px) {
+  #schedule .nav-tabs a {
+    padding: 8px 30px;
+  }
+}
+#schedule .nav-tabs a.active {
+  background-color: #019961;
+  color: #fff;
+}
+#schedule .sub-heading {
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0 auto 30px auto;
+}
+@media (min-width: 991px) {
+  #schedule .sub-heading {
+    width: 75%;
+  }
+}
+#schedule .tab-pane {
+  transition: ease-in-out 0.2s;
+}
+#schedule .schedule-item {
+  border-bottom: 1px solid #cad4f6;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: background-color ease-in-out 0.3s;
+}
+#schedule .schedule-item:hover {
+  background-color: #fff;
+}
+#schedule .schedule-item time {
+  padding-bottom: 5px;
+  display: inline-block;
+}
+#schedule .schedule-item .speaker {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+#schedule .schedule-item .speaker img {
+  height: 100%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  transition: all ease-in-out 0.3s;
+}
+#schedule .schedule-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+#schedule .schedule-item h4 span {
+  font-style: italic;
+  color: #19328e;
+  font-weight: normal;
+  font-size: 16px;
+}
+#schedule .schedule-item p {
+  font-style: italic;
+  color: #152b79;
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Venue Section
+--------------------------------------------------------------*/
+#venue {
+  padding: 60px 0;
+}
+#venue .container-fluid {
+  margin-bottom: 3px;
+}
+#venue .venue-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+#venue .venue-info {
+  background: url("../img/venue-info-bg.jpg") top center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+#venue .venue-info:before {
+  content: "";
+  background: rgba(13, 20, 41, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#venue .venue-info h3 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+}
+@media (max-width: 574px) {
+  #venue .venue-info h3 {
+    font-size: 24px;
+  }
+}
+#venue .venue-info p {
+  color: #fff;
+  margin-bottom: 0;
+}
+#venue .venue-gallery-container {
+  padding-right: 12px;
+}
+#venue .venue-gallery {
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+#venue .venue-gallery img {
+  transition: all ease-in-out 0.4s;
+}
+#venue .venue-gallery:hover img {
+  transform: scale(1.1);
+}
+
+/*--------------------------------------------------------------
+# Hotels Section
+--------------------------------------------------------------*/
+#hotels {
+  padding: 60px 0;
+}
+#hotels .hotel {
+  border: 1px solid #e0e5fa;
+  background: #fff;
+  margin-bottom: 30px;
+}
+#hotels .hotel:hover .hotel-img img {
+  transform: scale(1.1);
+}
+#hotels .hotel-img {
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+#hotels .hotel-img img {
+  transition: 0.3s ease-in-out;
+}
+#hotels h3 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 5px;
+  padding: 0 20px;
+}
+#hotels a {
+  color: #152b79;
+}
+#hotels a:hover {
+  color: #019961;
+}
+#hotels .stars {
+  padding: 0 20px;
+  margin-bottom: 5px;
+}
+#hotels .stars i {
+  color: #ffc31d;
+}
+#hotels p {
+  padding: 0 20px;
+  margin-bottom: 20px;
+  color: #060c22;
+  font-style: italic;
+  font-size: 15px;
+}
+
+/*--------------------------------------------------------------
+# Gallery Section
+--------------------------------------------------------------*/
+#gallery {
+  padding: 60px;
+  overflow: hidden;
+}
+#gallery .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+#gallery .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #019961;
+}
+#gallery .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #019961;
+}
+#gallery .swiper-slide-active {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  #gallery .swiper-wrapper {
+    padding: 40px 0;
+  }
+  #gallery .swiper-slide-active {
+    border: 5px solid #019961;
+    padding: 4px;
+    background: #fff;
+    z-index: 1;
+    transform: scale(1.15);
+    margin-top: 6px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Sponsors Section
+--------------------------------------------------------------*/
+#supporters {
+  padding: 60px 0;
+}
+#supporters .supporters-wrap {
+  border-top: 1px solid #e0e5fa;
+  border-left: 1px solid #e0e5fa;
+  margin-bottom: 30px;
+}
+#supporters .supporter-logo {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #e0e5fa;
+  border-bottom: 1px solid #e0e5fa;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.5);
+  height: 160px;
+}
+#supporters .supporter-logo:hover img {
+  transform: scale(1.2);
+}
+#supporters img {
+  transition: all 0.4s ease-in-out;
+}
+
+/*--------------------------------------------------------------
+# F.A.Q Section
+--------------------------------------------------------------*/
+#faq {
+  padding: 60px 0;
+}
+#faq .faq-list {
+  padding: 0;
+  /* list-style: none; */
+}
+#faq .faq-list li {
+  border-bottom: 1px solid #e9eaed;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+#faq .faq-list .question {
+  display: block;
+  position: relative;
+  font-family: #019961;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  padding-left: 25px;
+  cursor: pointer;
+  color:  #019961;
+  transition: 0.3s;
+}
+#faq .faq-list i {
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+#faq .faq-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 25px;
+}
+#faq .faq-list .icon-show {
+  display: none;
+}
+#faq .faq-list .collapsed {
+  color: black;
+}
+#faq .faq-list .collapsed:hover {
+  color: #019961;
+}
+#faq .faq-list .collapsed .icon-show {
+  display: inline-block;
+  transition: 0.6s;
+}
+#faq .faq-list .collapsed .icon-close {
+  display: none;
+  transition: 0.6s;
+}
+
+/*--------------------------------------------------------------
+# Subscribe Section
+--------------------------------------------------------------*/
+#subscribe {
+  padding: 60px;
+  background: url(../img/subscribe-bg.jpg) center center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+#subscribe:before {
+  content: "";
+  background: rgba(6, 12, 34, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+@media (min-width: 1024px) {
+  #subscribe {
+    background-attachment: fixed;
+  }
+}
+#subscribe .section-header h2, #subscribe p {
+  color: #fff;
+}
+#subscribe input {
+  background: #fff;
+  color: #060c22;
+  border: 0;
+  outline: none;
+  margin: 0;
+  padding: 9px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+}
+@media (min-width: 767px) {
+  #subscribe input {
+    min-width: 400px;
+  }
+}
+#subscribe button {
+  border: 0;
+  padding: 9px 25px;
+  cursor: pointer;
+  background: #019961;
+  color: #fff;
+  transition: all 0.3s ease;
+  outline: none;
+  font-size: 14px;
+  border-radius: 50px;
+}
+#subscribe button:hover {
+  background:  #019961;
+}
+@media (max-width: 460px) {
+  #subscribe button {
+    margin-top: 10px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Buy Tickets Section
+--------------------------------------------------------------*/
+#buy-tickets {
+  padding: 60px 0;
+}
+#buy-tickets .card {
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
+}
+#buy-tickets .card:hover {
+  box-shadow: 0 10px 35px 0 rgba(6, 12, 34, 0.2);
+}
+#buy-tickets .card hr {
+  margin: 25px 0;
+}
+#buy-tickets .card .card-title {
+  margin: 10px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+#buy-tickets .card .card-price {
+  font-size: 48px;
+  margin: 0;
+}
+#buy-tickets .card ul li {
+  margin-bottom: 20px;
+}
+#buy-tickets .card .text-muted {
+  opacity: 0.7;
+}
+#buy-tickets .card .btn {
+  font-size: 15px;
+  border-radius: 50px;
+  padding: 10px 40px;
+  transition: all 0.2s;
+  background-color: #019961;
+  border: 0;
+  color: #fff;
+}
+#buy-tickets .card .btn:hover {
+  background-color:  #019961;
+}
+#buy-tickets #buy-ticket-modal input, #buy-tickets #buy-ticket-modal select {
+  border-radius: 0;
+}
+#buy-tickets #buy-ticket-modal .btn {
+  font-size: 15px;
+  border-radius: 50px;
+  padding: 10px 40px;
+  transition: all 0.2s;
+  background-color: #019961;
+  border: 0;
+  color: #fff;
+}
+#buy-tickets #buy-ticket-modal .btn:hover {
+  background-color:  #019961;
+}
+
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+#contact {
+  padding: 60px 0;
+}
+#contact .contact-info {
+  margin-bottom: 20px;
+  text-align: center;
+}
+#contact .contact-info i {
+  font-size: 48px;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #019961;
+}
+#contact .contact-info address, #contact .contact-info p {
+  margin-bottom: 0;
+  color: #112363;
+}
+#contact .contact-info h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #112363;
+}
+#contact .contact-info a {
+  color: #4869df;
+}
+#contact .contact-info a:hover {
+  color: #019961;
+}
+#contact .contact-address, #contact .contact-phone, #contact .contact-email {
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  #contact .contact-address, #contact .contact-phone, #contact .contact-email {
+    padding: 20px 0;
+  }
+}
+@media (min-width: 768px) {
+  #contact .contact-phone {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+}
+#contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+#contact .php-email-form .error-message br + br {
+  margin-top: 25px;
+}
+#contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+#contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+#contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+#contact .php-email-form input, #contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+#contact .php-email-form input:focus, #contact .php-email-form textarea:focus {
+  border-color: #019961;
+}
+#contact .php-email-form input {
+  padding: 10px 15px;
+}
+#contact .php-email-form textarea {
+  padding: 12px 15px;
+}
+#contact .php-email-form button[type=submit] {
+  background: #019961;
+  border: 0;
+  padding: 10px 40px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+  cursor: pointer;
+}
+#contact .php-email-form button[type=submit]:hover {
+  background:  #019961;
+}
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #101522;
+  padding: 0 0 25px 0;
+  color: #eee;
+  font-size: 14px;
+}
+#footer .footer-top {
+  background: #040919;
+  padding: 60px 0 30px 0;
+}
+#footer .footer-top .footer-info {
+  margin-bottom: 30px;
+}
+#footer .footer-top .footer-info h3 {
+  font-size: 26px;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+#footer .footer-top .footer-info img {
+  height: 40px;
+  margin-bottom: 10px;
+}
+#footer .footer-top .footer-info p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+}
+#footer .footer-top .social-links a {
+  display: inline-block;
+  background: #222636;
+  color: #eee;
+  line-height: 1;
+  margin-right: 4px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+#footer .footer-top .social-links a i {
+  line-height: 0;
+  font-size: 16px;
+}
+#footer .footer-top .social-links a:hover {
+  background: #019961;
+  color: #fff;
+}
+#footer .footer-top h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #019961;
+}
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#footer .footer-top .footer-links ul i {
+  padding-right: 5px;
+  color: #019961;
+  font-size: 18px;
+}
+#footer .footer-top .footer-links ul li {
+  border-bottom: 1px solid #262c44;
+  padding: 10px 0;
+}
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+#footer .footer-top .footer-links ul a {
+  color: #eee;
+}
+#footer .footer-top .footer-links ul a:hover {
+  color: #019961;
+}
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+#footer .footer-top .footer-contact p {
+  line-height: 26px;
+}
+#footer .footer-top .footer-newsletter {
+  margin-bottom: 30px;
+}
+#footer .footer-top .footer-newsletter input[type=email] {
+  border: 0;
+  padding: 6px 8px;
+  width: 65%;
+}
+#footer .footer-top .footer-newsletter input[type=submit] {
+  background: #019961;
+  border: 0;
+  width: 35%;
+  padding: 6px 0;
+  text-align: center;
+  color: #fff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#footer .footer-top .footer-newsletter input[type=submit]:hover {
+  background:  #019961;
+}
+#footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+}
+#footer .credits {
+  text-align: center;
+  font-size: 13px;
+  color: #ddd;
+}
+
+
+
+/**
+* Template Name: TheEvent - v4.7.0
+* Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+(function() {
+  "use strict";
+
+  /**
+   * Easy selector helper function
+   */
+  const select = (el, all = false) => {
+    el = el.trim()
+    if (all) {
+      return [...document.querySelectorAll(el)]
+    } else {
+      return document.querySelector(el)
+    }
+  }
+
+  /**
+   * Easy event listener function
+   */
+  const on = (type, el, listener, all = false) => {
+    let selectEl = select(el, all)
+    if (selectEl) {
+      if (all) {
+        selectEl.forEach(e => e.addEventListener(type, listener))
+      } else {
+        selectEl.addEventListener(type, listener)
+      }
+    }
+  }
+
+  /**
+   * Easy on scroll event listener 
+   */
+  const onscroll = (el, listener) => {
+    el.addEventListener('scroll', listener)
+  }
+
+  /**
+   * Navbar links active state on scroll
+   */
+  let navbarlinks = select('#navbar .scrollto', true)
+  const navbarlinksActive = () => {
+    let position = window.scrollY + 200
+    navbarlinks.forEach(navbarlink => {
+      if (!navbarlink.hash) return
+      let section = select(navbarlink.hash)
+      if (!section) return
+      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+        navbarlink.classList.add('active')
+      } else {
+        navbarlink.classList.remove('active')
+      }
+    })
+  }
+  window.addEventListener('load', navbarlinksActive)
+  onscroll(document, navbarlinksActive)
+
+  /**
+   * Scrolls to an element with header offset
+   */
+  const scrollto = (el) => {
+    let header = select('#header')
+    let offset = header.offsetHeight
+
+    if (!header.classList.contains('header-scrolled')) {
+      offset -= 20
+    }
+
+    let elementPos = select(el).offsetTop
+    window.scrollTo({
+      top: elementPos - offset,
+      behavior: 'smooth'
+    })
+  }
+
+  /**
+   * Toggle .header-scrolled class to #header when page is scrolled
+   */
+  let selectHeader = select('#header')
+  if (selectHeader) {
+    const headerScrolled = () => {
+      if (window.scrollY > 100) {
+        selectHeader.classList.add('header-scrolled')
+      } else {
+        selectHeader.classList.remove('header-scrolled')
+      }
+    }
+    window.addEventListener('load', headerScrolled)
+    onscroll(document, headerScrolled)
+  }
+
+  /**
+   * Back to top button
+   */
+  let backtotop = select('.back-to-top')
+  if (backtotop) {
+    const toggleBacktotop = () => {
+      if (window.scrollY > 100) {
+        backtotop.classList.add('active')
+      } else {
+        backtotop.classList.remove('active')
+      }
+    }
+    window.addEventListener('load', toggleBacktotop)
+    onscroll(document, toggleBacktotop)
+  }
+
+  /**
+   * Mobile nav toggle
+   */
+  on('click', '.mobile-nav-toggle', function(e) {
+    select('#navbar').classList.toggle('navbar-mobile')
+    this.classList.toggle('bi-list')
+    this.classList.toggle('bi-x')
+  })
+
+  /**
+   * Mobile nav dropdowns activate
+   */
+  on('click', '.navbar .dropdown > a', function(e) {
+    if (select('#navbar').classList.contains('navbar-mobile')) {
+      e.preventDefault()
+      this.nextElementSibling.classList.toggle('dropdown-active')
+    }
+  }, true)
+
+  /**
+   * Scrool with ofset on links with a class name .scrollto
+   */
+  on('click', '.scrollto', function(e) {
+    if (select(this.hash)) {
+      e.preventDefault()
+
+      let navbar = select('#navbar')
+      if (navbar.classList.contains('navbar-mobile')) {
+        navbar.classList.remove('navbar-mobile')
+        let navbarToggle = select('.mobile-nav-toggle')
+        navbarToggle.classList.toggle('bi-list')
+        navbarToggle.classList.toggle('bi-x')
+      }
+      scrollto(this.hash)
+    }
+  }, true)
+
+  /**
+   * Scroll with ofset on page load with hash links in the url
+   */
+  window.addEventListener('load', () => {
+    if (window.location.hash) {
+      if (select(window.location.hash)) {
+        scrollto(window.location.hash)
+      }
+    }
+  });
+
+  /**
+   * Initiate glightbox
+   */
+  const glightbox = GLightbox({
+    selector: '.glightbox'
+  });
+
+  /**
+   * Gallery Slider
+   */
+  new Swiper('.gallery-slider', {
+    speed: 400,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      575: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      },
+      992: {
+        slidesPerView: 5,
+        spaceBetween: 20
+      }
+    }
+  });
+
+  /**
+   * Initiate gallery lightbox 
+   */
+  const galleryLightbox = GLightbox({
+    selector: '.gallery-lightbox'
+  });
+
+  /**
+   * Buy tickets select the ticket type on click
+   */
+  on('show.bs.modal', '#buy-ticket-modal', function(event) {
+    select('#buy-ticket-modal #ticket-type').value = event.relatedTarget.getAttribute('data-ticket-type')
+  })
+
+  /**
+   * Animation on scroll
+   */
+  window.addEventListener('load', () => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    })
+  });
+
+})()
+
+
+
+
+(function() {
+  "use strict";
+
+
+  const select = (el, all = false) => {
+    el = el.trim()
+    if (all) {
+      return [...document.querySelectorAll(el)]
+    } else {
+      return document.querySelector(el)
+    }
+  }
+
+
+  const on = (type, el, listener, all = false) => {
+    let selectEl = select(el, all)
+    if (selectEl) {
+      if (all) {
+        selectEl.forEach(e => e.addEventListener(type, listener))
+      } else {
+        selectEl.addEventListener(type, listener)
+      }
+    }
+  }
+
+
+  const onscroll = (el, listener) => {
+    el.addEventListener('scroll', listener)
+  }
+
+ 
+  let navbarlinks = select('#navbar .scrollto', true)
+  const navbarlinksActive = () => {
+    let position = window.scrollY + 200
+    navbarlinks.forEach(navbarlink => {
+      if (!navbarlink.hash) return
+      let section = select(navbarlink.hash)
+      if (!section) return
+      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+        navbarlink.classList.add('active')
+      } else {
+        navbarlink.classList.remove('active')
+      }
+    })
+  }
+  window.addEventListener('load', navbarlinksActive)
+  onscroll(document, navbarlinksActive)
+
+ 
+  const scrollto = (el) => {
+    let header = select('#header')
+    let offset = header.offsetHeight
+
+    if (!header.classList.contains('header-scrolled')) {
+      offset -= 20
+    }
+
+    let elementPos = select(el).offsetTop
+    window.scrollTo({
+      top: elementPos - offset,
+      behavior: 'smooth'
+    })
+  }
+
+  
+  let selectHeader = select('#header')
+  if (selectHeader) {
+    const headerScrolled = () => {
+      if (window.scrollY > 100) {
+        selectHeader.classList.add('header-scrolled')
+      } else {
+        selectHeader.classList.remove('header-scrolled')
+      }
+    }
+    window.addEventListener('load', headerScrolled)
+    onscroll(document, headerScrolled)
+  }
+
+ 
+  let backtotop = select('.back-to-top')
+  if (backtotop) {
+    const toggleBacktotop = () => {
+      if (window.scrollY > 100) {
+        backtotop.classList.add('active')
+      } else {
+        backtotop.classList.remove('active')
+      }
+    }
+    window.addEventListener('load', toggleBacktotop)
+    onscroll(document, toggleBacktotop)
+  }
+
+
+  on('click', '.mobile-nav-toggle', function(e) {
+    select('#navbar').classList.toggle('navbar-mobile')
+    this.classList.toggle('bi-list')
+    this.classList.toggle('bi-x')
+  })
+
+  on('click', '.navbar .dropdown > a', function(e) {
+    if (select('#navbar').classList.contains('navbar-mobile')) {
+      e.preventDefault()
+      this.nextElementSibling.classList.toggle('dropdown-active')
+    }
+  }, true)
+
+ 
+  on('click', '.scrollto', function(e) {
+    if (select(this.hash)) {
+      e.preventDefault()
+
+      let navbar = select('#navbar')
+      if (navbar.classList.contains('navbar-mobile')) {
+        navbar.classList.remove('navbar-mobile')
+        let navbarToggle = select('.mobile-nav-toggle')
+        navbarToggle.classList.toggle('bi-list')
+        navbarToggle.classList.toggle('bi-x')
+      }
+      scrollto(this.hash)
+    }
+  }, true)
+
+  window.addEventListener('load', () => {
+    if (window.location.hash) {
+      if (select(window.location.hash)) {
+        scrollto(window.location.hash)
+      }
+    }
+  });
+
+  const glightbox = GLightbox({
+    selector: '.glightbox'
+  });
+
+  
+  new Swiper('.gallery-slider', {
+    speed: 400,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      575: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      },
+      992: {
+        slidesPerView: 5,
+        spaceBetween: 20
+      }
+    }
+  });
+
+ 
+  const galleryLightbox = GLightbox({
+    selector: '.gallery-lightbox'
+  });
+
+  on('show.bs.modal', '#buy-ticket-modal', function(event) {
+    select('#buy-ticket-modal #ticket-type').value = event.relatedTarget.getAttribute('data-ticket-type')
+  })
+
+ 
+  window.addEventListener('load', () => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    })
+  });
+
+})()
+
+<div class="row" style="margin-top: 80px;">
+ 
+  <div class="col-lg-4">
+    <img style="    " src="/img/advisoryspeakers/2.jpg" alt="Speaker 2" class="img-fluid">
+  </div>
+
+  <div class="col-lg-8">
+    <div class="details">
+          <h2 style="margin-top: 0px;">Prof. R. C. Singh</h2>
+      <div class="social">
+
+        <a href=" https://scholar.google.co.in/citations?user=zLnSfm4AAAAJ&hl=en"><img class="iconResizer" src=<%=a%>></a>
+        <a href="https://www.researchgate.net/profile/R-C-Singh"><img class="iconResizer" src="https://img.icons8.com/windows/24/000000/researchgate.png"/></a>
+        <a href="https://www.linkedin.com/in/dr-r-c-singh-72930253/?originalSubdomain=in"><img class="iconResizer" src=<%=c%>></a>
+      </div>
+      <p style="text-align: justify;"> 
+        Prof. Singh has a rich experience of more than 30 years as a researcher, an exemplary teacher and an astute administrator, a rare blend of leadership in research and academic administration. Prof. Singh has successfully completed 3 research projects sponsored by Department of Science and Technology (Govt. of India). 
+        Prof. Singh has number of academic honors and recognitions to his credit that includes Short-Term Visitor status in The Abdus Salam International Centre for Theoretical Physics, Italy. He was conferred the “Bharat Vidya Shiromani Award” by the International Institute of Education and Management; the “Pride of International Education Excellence Award” by the Intellectual People and Economic Growth Association; the “Star of Asia Award” by International Business Council; the "Bharat Vibhushan Samman Puraskar" by Global Achievers Foundation; the "Lifetime Achievement Award" by National & International Compendium; the “Intellectual Quality Excellence Award” by Indian Journalist Compendium; and the “Dronacharya Award” by Shree Narayan Sanskritik Chetna Nyas. The Marquis Who’s Who has selected Prof. Singh for “Albert Nelson Marquis Lifetime Achievement Award” and “Lifetime Achievement Award”.
+        </p>
+       
+    </div>
+  </div>
+</div>
+<!-- 3 -->
+
+
+<div class="row" style="margin-top: 60px;">
+ 
+  <div class="col-lg-4">
+    <img style="    " src="/img/advisoryspeakers/3.jpg" alt="Speaker 3" class="img-fluid">
+  </div>
+
+  <div class="col-lg-8">
+    <div class="details">
+          <h2 style="margin-top: 0px;"> Prof. S. Packirisamy</h2>
+      <div class="social">
+
+        <a href=" https://scholar.google.com/citations?user=BTxO6gwAAAAJ&hl=en"><img class="iconResizer" src=<%=a%>></a>
+        <a href="https://www.linkedin.com/in/shanmugam-packirisamy-25443990/?originalSubdomain=in"><img class="iconResizer" src=<%=c%>></a>
+      </div>
+      <p style="text-align: justify;"> 
+        
+ Prof S. Packirisamy obtained MSc in Chemistry and Ph.D. in Science (Polymer Chemistry) from the Indian Institute of Technology, Kharagpur in 1978 and 1982 respectively. He was UNESCO Fellow (Oct. 1982 to Sep. 1983) in the Department of Polymer Science & Engineering, Tokyo Institute of Technology, Tokyo, Japan and worked on the anionic living  polymerization of  protected functional group containing vinyl monomers and on completion of the UNESCO program he was awarded International Post-Graduate Diploma in Chemistry & Chemical Engineering. 
+He joined the Vikram Sarabhai Space Centre (VSSC), Indian Space Research Organization, Thiruvananthapuram in June 1986 and superannuated in December 2015. Occupied several positions such as Project Manager (Space Capsule Recovery Experiment), Head, Ceramic Matrix Products Division, Group Director, Analytical Spectroscopy & Ceramics Group and Deputy Director-VSSC (PCM Entity). While working in VSSC/ISRO he availed 2 years leave (Jan. 1992-Jan. 1994) and worked as Research Associate in Case Western Reserve University, Cleveland, Ohio, USA on Atomic Oxygen Resistant Coatings for Low Earth Orbit Space Structures and as Visiting Scientist in Michigan Molecular Institute on Multi-component Polyblends and Recycling of Plastics.
+He has won many awards including ISRO Merit Award (2014) and Acharya P. C. Ray ICC Award for Indigenization of Chemicals (Team Award) and ICC Award for the Design of Chemical Plants (Team Award). He has been a Visiting Consultant to DACC Carbon Co., Ltd., Jeonju, Jenonbuk, South Korea (2017). 
+
+        </p>
+       
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row" style="margin-top: 60px;">
+ 
+  <div class="col-lg-4">
+    <img style="    " src="/img/advisoryspeakers/4.jpg" alt="Speaker 3" class="img-fluid">
+  </div>
+
+  <div class="col-lg-8">
+    <div class="details">
+          <h2 style="margin-top: 0px;"> Prof. Bhaskar Bhattacharya</h2>
+      <div class="social">
+
+        <a href="https://scholar.google.co.in/citations?user=Ya7BVFUDQfsC&hl=en"><img class="iconResizer" src=<%=a%>></a>
+        <a href="https://www.linkedin.com/in/bhaskar-bhattacharya-14355578/?originalSubdomain=in"><img class="iconResizer" src=<%=c%>></a>
+      </div>
+      <p style="text-align: justify;"> 
+        Prof. Bhaskar Bhattacharya received his master degree in Physics in the year 1991 and Ph.D in the year 1998 from Banaras Hindu University Varanasi. He was awarded Young Teachers Carrier Award by AICTE in the year 2000 and Certificate of Merit for his research contribution in the years 1998 by Physics Department BHU. Young Scientist award and Best Poster Award for his research papers in international conference on solid state ionics. A life member of Indian Physics Association and Indian Solid State Ionic Society, Indian Society for Technical Education. Prof. Bhattacharya is a potential referee for many international journals. And also member of advisory bord of High Performance Polymer. His areas of research interest are Polymer Electrolytes, Solid Polymer Electrolytes, Polymer Composite Electrolytes, Dye sensitized solar cell (DSSC) using polymer electrolytes, Quantum Dot Sensitized Solar cells and Ion Beam Irradiation effects on Polymer Electrolytes. Has published more than 30 papers in journals of high repute. He had also worked as research professor in KAIST South Korea. 
+        </p>
+       
+    </div>
+  </div>
+</div>
+
+
+
+//////iam aaddng the app.js header//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+
+require('dotenv').config();
+const express = require("express");
+const multer = require('multer');
+const path = require('path');
+const mongoose= require("mongoose")
+const ejs = require('ejs');
+const bodyParser = require("body-parser");
+const _ = require('lodash');
+var nodemailer = require('nodemailer');
+var flash = require('connect-flash');
+const jwt = require('jsonwebtoken');
+const  session = require("express-session");
+const passport = require("passport");
+const passportLocalMongoose = require("passport-local-mongoose");
+const findOrCreate = require('mongoose-findorcreate');
+var moment = require('moment');
+var isJson = require("is-json");
+var json2xls = require("json2xls");
+const fs = require('fs');  
+const PDFDocument = require('pdfkit');
+Schema = mongoose.Schema;
+
+const app = express();
+app.set('view engine', 'ejs');
+
+app.use(express.static("public", {
+    maxAge: 86400000,
+    setHeaders: function(res, path) {
+        res.setHeader("Expires", new Date(Date.now() + 2592000000*30).toUTCString());}
+}));
+app.use(bodyParser.json({ limit: '50mb' }))
+app.use(bodyParser.urlencoded({
+  limit: '50mb',
+  extended: true,
+}));
+const JWT_SECRET = process.env.JWT_SECRET;
+
+app.use(session({
+    secret: process.env.COOKIE_SECRET,
+  cookie:{maxAge:3600000},
+    resave: false,
+    saveUninitialized:false,
+   
+}));
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session()); 
+
+// mongoose.connect("mongodb+srv://admin-gyanesh_19:blackhat19@cluster0.jkph9.mongodb.net/myFirstDatabase?retryWrites=true/gyabeshDb", {useNewUrlParser:true, useUnifiedTopology:true, useFindAndModify: false})
+// .then(()=>console.log('connected to db'))
+// .catch((err)=>console.log('err',err))
+
+
+const mongoURI = `${process.env.URL}`
+const promise = mongoose.connect(process.env.URL, { useNewUrlParser: true,useUnifiedTopology:true, useFindAndModify: false }).then(()=>console.log('connected to db'))
+.catch((err)=>console.log('err',err));
+// Create mongo connection
+const conn = mongoose.connection
+// Create storage engine
+
+
+
+
+// const mongoURI = "mongodb+srv://admin-gyanesh_19:blackhat19@cluster0.jkph9.mongodb.net/myFirstDatabase?retryWrites=true/gyabeshDb";
+
+// // Create mongo connection
+// const conn = mongoose.connect(mongoURI,{useNewUrlParser:true, useUnifiedTopology:true, useFindAndModify: false});
+
+
+mongoose.set("useCreateIndex", true);
+
+
+const postSchema = new mongoose.Schema({
+    requestedPostId:String,
+    admail: String,
+    amount:String,
+   
+
+    postJobType:{type:String,lowercase: true,},
+    postJobCertificate:{type:String,lowercase: true,},
+    postJobLor:{
+        type:String,
+    lowercase: true,
+    },
+    
+
+    postJobTitle: {
+        type:String,
+    lowercase: true,
+    },
+
+    postJobDescription:  {
+        type:String,
+   
+    },
+
+    postJobStartingFrom: String,
+
+    postJobRequired:  {
+        type:String,
+    
+    },
+
+   
+
+    postJobDuration:  {
+        type:String,
+    lowercase: true,
+    },
+
+    applyby:String,
+    applyingname: {
+        type:String,
+    lowercase: true,
+    },
+
+  
+    enddate: String,
+    opennings:String,
+ 
+    hours: String,
+    howyou: String,
+    additional: {
+        type:String,
+        lowercase:false,
+    
+    },
+    additionalagain: {
+        type:String,
+        lowercase:false,
+    
+    },
+    Timestamp : { 
+        type : Date, 
+        default: Date.now 
+      }
+    });
+
+
+  const applySchema = new mongoose.Schema({
+      cv:String,
+      status:String,
+     postId:{
+         type:String,         
+     },
+     tname:String,
+     xname:{
+         type:String,
+     },
+     
+    branch:{type:String,lowercase:true},
+    year:{type:String,lowercase:true},
+    
+    name: {
+        type:String,
+    lowercase: true,
+    },
+    Department: {
+        type:String,
+        lowercase: true,
+    },
+    contact: String,
+    email: {
+        type:String,
+    lowercase: true,
+    },
+    experience: {
+        type:String,
+  
+    },
+    skills: {
+        type:String,
+  
+    },
+    whyyou:{
+type : String
+    },
+    ans1:{
+        type:String,
+       
+        
+    
+    },
+    ans2:{
+        type:String,
+       
+   
+    
+    },
+    
+    Timestamp:{
+        type: Date,
+        default: Date.now,
+    },
+    
+
+});  
+
+const adminSchema = new mongoose.Schema({
+    email:String,
+    password: String,
+    secret: String,
+});
+const userSchema = new mongoose.Schema({
+
+  feeStatus:String,
+    applyingName:String,
+    bankName:String,
+    transactionId:String,
+    receipt:String,
+    
+    registered:{
+        type:Boolean,
+        default:false,
+    },
+    email:String,
+    password: String,
+    gender:String,
+    dob:String,
+    address:String,
+    designation:String,
+    qualification:String,
+    organisationName:String,
+
+    researchAbstract:String,
+     contact:String,
+    fname:String,
+    fullpaper:String,
+    fstatus:String,
+    astatus:String,
+    abspaper:String,
+    lname:String,
+    cv:String,
+    oraganisationAddress:String,
+    oraganisationCity:String,
+    oraganisationPincode:String,
+    oraganisationName:String,
+    registrationCompletionYear:{
+        type:String,
+       
+    } ,
+    branch:{
+        type:String,
+        lowercase:true,
+    } ,
+   
+    
+ 
+
+});
+
+var maxSize = 10000000;
+const storage = multer.diskStorage({ 
+  options:{ useUnifiedTopology: true,},
+  db: promise,
+ destination:"./public/uploads",
+ filename:(req, file, cb)=>{
+   cb(null,Date.now()+path.extname(file.originalname))
+ }
+});
+const upload = multer({ storage,
+   fileFilter: function (req, file, callback) {
+  var ext = path.extname(file.originalname);
+  if(ext !== ('.docx' || '.doc')) {
+      return callback(new Error('1.Only docx files are allowed\n2.please select a docx file'))
+  }
+  callback(null, true)
+}, limits: { fileSize: maxSize } }).single('file');
+
+const uploads = multer({ storage,
+    fileFilter: function (req, file, callback) {
+   var ext = path.extname(file.originalname);
+   if(ext !== ('.pdf')) {
+       return callback(new Error('1.Only pdf files are allowed\n2.please select a pdf file'))
+   }
+   callback(null, true)
+ }, limits: { fileSize: maxSize } }).single('file');
+
+
+
+userSchema.plugin(passportLocalMongoose);
+userSchema.plugin(findOrCreate);
+const User = new mongoose.model("User",userSchema);
+
+adminSchema.plugin(passportLocalMongoose);
+adminSchema.plugin(findOrCreate);
+const Admin = new mongoose.model("Admin",adminSchema);
+const Post = mongoose.model("Post", postSchema);
+const Apply = mongoose.model("Apply", applySchema);
+
+module.exports =  mongoose.model('postJobTitle',postSchema);  
+module.exports =  mongoose.model('applyingname',postSchema);  
+module.exports =  mongoose.model('postJobDuration',postSchema);  
+module.exports =  mongoose.model('postJobRequired',postSchema);  
+module.exports =  mongoose.model('postJobType',postSchema);  
+
+
+
+var userModel = mongoose.model('User',userSchema);
+var applyModel = mongoose.model('Apply',applySchema);
+var postModel = mongoose.model('Post',postSchema);
+var userCount = userModel.countDocuments('id');
+
+
+passport.use(User.createStrategy());
+passport.serializeUser(function(user,done){
+    done(null,user.id);
+});
+passport.deserializeUser(function(id,done){
+    User.findById(id,function(err,user){
+        done(err, user);
+    })
+});
+let transporter = nodemailer.createTransport({
+     service: 'gmail',
+    auth: {
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD,
+    }});
+
+app.get("/register", function(req, res, next)
+{
+   
+        res.render("register",{a1:"", a2:"", a3:"", a4:"", a5:"", a6:"",});
+   
+});
+app.get("/adminregister", function(req, res, next)
+{
+   
+        res.render("adminregister",{a1:"", a2:"", a3:"", a4:"", a5:"", a6:"",});
+   
+});
+app.get("/login", function(req, res, next)
+{
+    res.render("login");
+});
+app.get("/adminlogin", function(req, res, next)
+{
+    res.render("adminlogin",{a1:"Login",a2:"/login",a3:"", a4:"", a5:"", a6:"",});
+});
+
+
+
+app.get("/LogOut", function(req, res, next)
+{
+    req.logout();
+    res.redirect("/login");
+});
+
+app.post("/registers", function(req, res, next){
+    console.log(req.body.username)
+    var organisationName = req.body.organisationName;
+    var name = req.body.username;
+    var password = req.body.password;
+    var password2 = req.body.password2;
+    var ab=req.body.branch;
+    var bc=req.body.fname;
+    var cd=req.body.lname;
+   var de=req.body.gender;
+   var Registered = false;
+   
+
+    var ef=req.body.registrationCompletionYear;
+    var fg=req.body.contact;
+  
+    // var hh = req.file.filename;
+    var ij= req.body.dob;
+    var jk=req.body.address;
+    var kl=req.body.designation;
+    var lm=req.body.qualification;
+    // var mn=req.body.registrationCompletion;
+    var no = req.body.researchAbstract;
+    var op= req.body.phdGuideName;
+    var pr= req.body.phdGuideEmail;
+    var rq= req.body.phdGuideMobile;
+    var qs= req.body.oraganisationName;
+    var st =req.body.oraganisationAddress;
+    var tu= req.body.oraganisationCity;
+    var uv= req.body.oraganisationPincode;
+ 
+ 
+  
+        const info = new User({
+branch:ab,
+fname:bc,
+lname:cd,
+username:name ,
+organisationName:organisationName,
+registered:Registered,
+
+
+contact: fg,
+registered:"Not Applied",
+
+feeStatus:"Not Submitted",
+applyingName:'',
+bankName:'',
+transactionId:'',
+receipt:'',
+// cv:hh,
+
+gender:de,
+dob:ij,
+address:jk,
+designation:kl,
+qualification:lm,
+
+registrationCompletionYear:ef,
+researchAbstract:no,
+phdGuideName:op,
+phdGuideEmail:pr,
+phdGuideMobile:rq,
+oraganisationName:qs,
+oraganisationAddress:st,
+oraganisationCity:tu,
+oraganisationPincode:uv,
+
+
+
+})
+    var mailOptions = {
+        from: '2019530784.gyanesh@ug.sharda.ac.in',
+        to: req.body.username,
+        subject: 'Welcome , You have successfully Registered on ICOE-2022.',
+        text: 'Congrats on successful Registration.',
+      };
+// if(!name || !password || !password2  || !ab || !bc || !de || !ef || !fg ){
+//     console.log(name, password, password2, ab, bc, cd, de, ef, fg)
+//     res.render('register',{ a1:"",a2:"",a3:"", a4:"", a5:"", a6:"",err: "please fi all the details."});
+// }
+// else{
+    
+      
+    if(password != password2){
+        res.render('register',{ a1:"",a2:"",a3:"", a4:"", a5:"", a6:"",err: "passwords didn't match.",});
+    }else{
+    
+    User.register(new User(info), req.body.password, function(err,user){
+        if(err){
+          var err = {message: "1. Something error registering ."+'\n'+"2. Already Registered, try to login"+'\n'+" Please try again later.", err:"Sorry!!!"}
+          next(err)
+          console.log(err+ "register")
+        }
+        else{
+            passport.authenticate("local")(req, res, function(){
+                transporter.sendMail(mailOptions, function(err, info){
+                    if(err){
+                        console.log(err+ "amiling")
+                        var err = {message: "Something error in sending confirmation mail."+'\n'+"  But you have been registered successfully. "+'\n'+" Try to to login try to login with same credentials.", err:"Sorry!!!"}
+                        next(err)
+     
+           
+                         
+                    } else {
+
+                        req.flash('message', 'Successfully Registered');
+                      res.redirect("/homepage");
+                    }
+                  });
+                
+              
+
+            })
+        }
+    })
+
+}
+
+
+
+});
+
+
+
+app.post("/adminregister", function(req, res, next){
+    
+    Admin.register({username: req.body.username}, req.body.password, function(err,user){
+        if(err){
+            var err = {message: "Something error registering ."+'\n'+" Please try again later.", err:"Sorry!!!"}
+            next(err)
+             
+           
+        }
+        else{
+            passport.authenticate("local")(req, res, function(){
+                
+                res.redirect("/fj7ebhds7b=7y7823b7823badminpanel");
+
+            })
+        }
+    })
+    
+});
+
+app.post("/login",function(req, res, next){
+ var name = req.body.username;
+ var password = req.body.password;
+
+    const user = new User ({
+        username: name,
+        password: req.body.password,
+    });
+  
+    
+
+  if(!name || !password){
+res.render("login", { a1:"Admin Login",a2:"/adminlogin",a3:"", a4:"", a5:"", a6:"", err:"Please fill all the fields"})
+  }
+   else{
+    req.login(user, function(err){
+    if(!err) {
+            passport.authenticate("local")(req,res , function(){
+            
+                 
+                res.redirect("/homepage");
+            });
+        }
+        else{
+            var err = {message: "We are facing some issues ."+'\n'+" Please try again later.", err:"Sorry!!!"}
+            next(err)
+             
+           
+        }
+    })
+   }
+  
+
+});
+
+app.get('/homepage', (req, res)=>{
+    if(req.isAuthenticated())
+    res.render('homepage',{name:req.user.fname +" " +req.user.lname, suc: req.user.registered, feeStatus:req.user.feeStatus, ab:req.user.astatus, fp:req.user.fstatus})//
+    else
+    res.redirect('/login')
+})
+
+app.get('/uploadpaper', upload, (req, res)=>{
+    if(req.isAuthenticated())
+    res.render('uploadpaper')  
+    else
+    res.redirect('/login')
+})
+app.get('/abstract', upload, (req, res)=>{
+    if(req.isAuthenticated())
+    res.render('abstract')  
+    else
+    res.redirect('/login')
+})
+
+app.get('/success', upload, (req, res)=>{
+    if(req.isAuthenticated())
+    res.render('success')  
+    else
+    res.redirect('/login')
+})
+
+
+app.post('/abstract', upload, (req, res)=>{
+    var fullpaper =(req.file.filename).toString();
+    console.log(fullpaper)
+    var id = req.user.id;
+    if(req.isAuthenticated()){
+    User.findByIdAndUpdate(id, {
+         abspaper:fullpaper,
+         astatus:"Submitted",
+    },{new:true},
+
+    function (err, doc) {
+
+    if(err) {   var err = {message: "1. Something went wrong while editing the internship"+'\n'+"2. Internal server Error.", err:"500"}
+    next(err)
+    }
+else{
+    console.log(doc)
+
+res.redirect("/homepage")
+}
+    })
+
+}
+    else
+    res.redirect('/login')
+})
+
+
+app.post('/uploadpaper', upload, (req, res)=>{
+    var fullpaper =(req.file.filename).toString();
+    console.log(fullpaper)
+    var id = req.user.id;
+    if(req.isAuthenticated()){
+    User.findByIdAndUpdate(id, {
+        fullpaper:fullpaper,
+        fstatus:"Submitted"
+    },{new:true},
+
+    function (err, doc) {
+
+    if(err) {   var err = {message: "1. Something went wrong while editing the internship"+'\n'+"2. Internal server Error.", err:"500"}
+    next(err)
+    }
+else{
+    console.log(doc)
+
+res.redirect("/homepage")
+}
+    })
+
+}
+    else
+    res.redirect('/login')
+})
+
+app.post("/adminlogin",function(req, res, next){
+   var emails= req.body.username;
+   var password = req.body.password;
+   
+    const admin = new Admin ({
+        username: req.body.username,
+        password: req.body.password,
+    });
+
+    if(!emails || !password){
+        res.render("login", { a1:"Login",a2:"/login",a3:"", a4:"", a5:"", a6:"", err:"Please fill all the fields"})
+          }else{
+
+    Admin.findOne({username: emails}).then(admin=>{
+if(!admin){
+  res.render("adminlogin", {err:"not a Valid user",a1:"Login",a2:"/login",a3:"", a4:"", a5:"", a6:"",});
+}else{
+    req.login(admin, function(err){
+        if(err) {
+            var err = {message: "Something went wrong!! ."+'\n'+" Please try again later.", err:"Sorry!!!"}
+        next(err)
+        }
+       else{
+        
+        passport.authenticate("local")(req,res , function(){
+            res.redirect("/fj7ebhds7b=7y7823b7823badminpanel");
+        });
+         
+        }
+    })
+}
+});
+          }
+});
+
+
+
+// var older_than = moment().subtract(60, 'days').toDate();
+// Post.find({ Timestamp: { $lte: older_than } }).deleteMany().exec().then((RemoveStatus) => {
+//     Apply.find({Timestamp: {$lte: older_than} }).deleteMany().exec().then((RemoveStatue) => {
+// console.log("Deleted successfully");
+//     });
+    
+// }).catch((err) => {
+//   console.log(err)
+// });
+let a= "https://img.icons8.com/material-outlined/24/000000/google-scholar.png";
+let b = "https://img.icons8.com/windows/24/000000/orcid.png"
+let c = "https://img.icons8.com/material-outlined/24/000000/linkedin--v1.png"
+let d = "/img/ic.png";
+app.get("/", function(req, res, next)
+{
+
+    // if (req.isAuthenticated()){
+   res.render('home',{a:"https://img.icons8.com/material-outlined/24/000000/google-scholar.png", b:b, c:c});
+    
+});
+app.get("/icoe", function(req, res, next)
+{
+
+    // if (req.isAuthenticated()){
+   res.render('icoe',{a:a, b:b, c:c, d:d});
+    
+});
+app.get("/speakersandkeynotes", function(req, res, next)
+{
+
+    // if (req.isAuthenticated()){
+   res.render('speakerDetails',{a:a, b:b, c:c, d:d});
+    
+});
+app.get("/advisory", function(req, res, next)
+{
+
+    // if (req.isAuthenticated()){
+   res.render("advisory",{a:a, b:b, c:c});
+    
+});
+
+app.get("/registrationguidelines", function(req, res, next)
+{
+
+    // if (req.isAuthenticated()){
+   res.render("registrationguidelines",{a:a, b:b, c:c});
+    
+});
+
+app.get("/publicationPublisher", function(req, res, next)
+{
+
+    // if (req.isAuthenticated()){
+   res.render('publication',{a:a, b:b, c:c});
+    
+});
+app.get("/ourteam", function(req, res, next)
+{
+
+    // if (req.isAuthenticated()){
+   res.render('ourteam',{a:a, b:b, c:c});
+    
+});
+
+app.get("/abstractsubmission", function(req, res, next)
+{
+
+
+   res.render('submission');
+    
+});
+
+app.get("/importantDates", function(req, res, next)
+{
+
+
+   res.render('importantDates');
+    
+});
+app.get("/organisingcomitee", function(req, res, next)
+{
+
+
+   res.render('organisingcomitee',{a:a, b:b, c:c});
+    
+});
+
+app.get("/feeConf", function(req, res, next)
+{
+
+    if(req.isAuthenticated()){
+
+   res.render('feeConf',{a:a,  c:c, feeStatus:req.user.status});}
+   else{
+res.redirect('/login')
+   }
+    
+});
+
+app.get("/profile", function(req, res, next)
+{
+    if(req.isAuthenticated())
+
+
+   res.render('profile',{name:req.user.fname, email:req.user.username, contact:req.user.contact,qualification: req.user.qualification,organisationName: req.user.organisationName});
+    else res.redirect('/login')
+});
+
+
+
+
+
+
+app.get("/registerevent", function(req, res, next)
+{
+    if(req.isAuthenticated())
+
+
+   res.render('registerevent', {status:req.user.status});
+    else res.redirect('/login')
+});
+
+
+
+app.post("/registerevent", function(req, res, next)
+{
+    if(req.isAuthenticated())
+{
+    var name = req.user.username;
+    var mailOptions = {
+        from: '2019530784.gyanesh@ug.sharda.ac.in',
+        to: name,
+        subject: 'You have successfully Registered for the  ICOE-2022 Event.',
+        text: 'Congrats on successful Registration.',
+      };
+    User.findByIdAndUpdate(req.user._id, {
+        registered: true,
+    }, {new: true}, (err, doc)=>{
+        if(err){
+            var err = {message: "1. Something error registering '\n' Please try again later.", err:"Sorry!!!"}
+            next(err)
+           
+          }
+     else{
+        transporter.sendMail(mailOptions, function(err, info){
+            if(err){
+               
+                var err = {message: "Something error in sending confirmation mail."+'\n'+"  But you have been registered  for the ICOE-2022 event. "+'\n'+" Enjoy", err:"Sorry!!!"}
+
+                next(err)
+
+   
+                 
+            } else {
+
+                req.flash('message', 'Successfully Registered');
+                res.redirect('/homepage')
+            }
+          });
+
+    }
+})
+    
+
+}
+
+  
+    else res.redirect('/login')
+});
+
+app.get('/fj7ebhds7b=7y7823b7823badminpanel', (req, res)=>{
+    if(req.isAuthenticated()){
+
+        var home = 'fj7ebhds7b=7y7823b7823badminpanel';
+        var homes = '';
+     
+            var query= {} ;
+            var page=1;
+            var perpage=30;
+            if(req.query.page!=null){
+                page= req.query.page
+            }
+            query.skip=(perpage * page)-perpage;
+            query.limit=perpage;
+    
+            
+                userModel.find({}, {}, query).sort({_id: -1}).exec((err, posts) => { 
+                if(err){
+                    var err = {message: "1. Something went wrong."+'\n'+"2. Internal server Error.", err:"500"}
+                    next(err)
+                }else{
+                userModel.countDocuments((err,count)=>{ 
+                     if(err){
+                        var err = {message: "1. Something went wrong."+'\n'+"2. Internal server Error.", err:"500"}
+                        next(err)
+                     }else{
+                     res.render('admin',{
+                        posts:posts,
+                         home: home,
+                         homes :homes ,
+                         message:req.flash('message'),
+            Applicants: count,
+                         current:page,
+                         pages:Math.ceil(count/perpage),
+                         a1:"Log Out",a2:"/logout",a3:"Students's Home", a4:"/Home", a5:"", a7:"", a6:"",
+                        
+                     })}
+                });
+                  }  });
+    }else{
+        res.redirect('adminlogin')
+    }
+
+})
+
+app.post("/feeConf",uploads, (req, res, next)=>{
+    if(req.isAuthenticated()){
+
+        var {applyingName , bankName,transactionId}  = req.body
+    
+      var receipt = (req.file.filename).toString();
+    //   var cv = (req.file.filename).toString();
+       console.log(req.body.applyingName, bankName);
+       User.findByIdAndUpdate(req.user._id, {
+        applyingName:applyingName,
+        bankName:bankName,
+        transactionId:transactionId,
+        receipt:    receipt,
+        feeStatus:"waiting for confirmation",
+
+        
+       }, {new:true}, (err, doc)=>{
+        if(err){
+            var err = {message: "1. Something went wrong."+'\n'+"2. Internal server Error.", err:"500"}
+            next(err)
+        }
+        else{
+            console.log(doc)
+            res.redirect('/homepage')
+        }
+       })
+    }else{
+        res.redirect('/login')
+    }
+})
+
+app.get('/giveconfirmation', (req, res, next)=>{
+    if(req.isAuthenticated()){
+
+        var home = 'giveconfirmation';
+        var homes = '';
+     
+            var query= {} ;
+            var page=1;
+            var perpage=30;
+            if(req.query.page!=null){
+                page= req.query.page
+            }
+            query.skip=(perpage * page)-perpage;
+            query.limit=perpage;
+    
+            
+                userModel.find({feeStatus:"waiting for confirmation"},{},  query).sort({_id: 1}).exec((err, posts) => { 
+                if(err){
+                    var err = {message: "1. Something went wrong."+'\n'+"2. Internal server Error.", err:"500"}
+                    next(err)
+                }else{
+                userModel.countDocuments({status:"Applied"}, (err,count)=>{ 
+                     if(err){
+                        var err = {message: "1. Something went wrong."+'\n'+"2. Internal server Error.", err:"500"}
+                        next(err)
+                     }else{
+                     res.render('giveconfirmation',{
+                        posts:posts,
+                         home: home,
+                         homes :homes ,
+                         message:req.flash('message'),
+            Applicants: count,
+                         current:page,
+                         pages:Math.ceil(count/perpage),
+                         a1:"Log Out",a2:"/logout",a3:"Students's Home", a4:"/Home", a5:"", a7:"", a6:"",
+                        
+                     })}
+                });
+                  }  });
+    }else{
+        res.redirect('/adminlogin')
+    }
+
+})
+app.get('/giveconfirmation/:rec', (req, res ,next)=>{
+    if(req.isAuthenticated()){
+        
+    var fileName =req.params.rec;
+    if (fileName!="" || fileName!= null) {
+    fs.readFile("./public/uploads/"+fileName, (err, data) => {
+     if(err) {
+       var err = {message: "1. Sorry"+'\n'+"2. Sorry not a proper file.", err:"404"}
+       next(err);
+    
+     }
+    
+     else{
+      res.set({
+        "Content-Type": "application/pdf", 
+        "Content-Disposition": "inline; filename=" + fileName,
+      });
+      res.send(data); 
+     }
+      });
+  } else {
+    var err = {message: "1. Sorry"+'\n'+"2. Not an appropriate file to view.", err:"404"}
+    next(err);
+  
+  }
+
+
+    }else{
+        res.redirect('/adminlogin')
+    }
+})
+app.get('/giveconfirmations/:rec', (req, res ,next)=>{
+    if(req.isAuthenticated()){
+        
+    var fileName =req.params.rec;
+    if (fileName!="" || fileName!= null) {
+    fs.readFile("./public/uploads/"+fileName, (err, data) => {
+     if(err) {
+       var err = {message: "1. Sorry"+'\n'+"2. Sorry not a proper file.", err:"404"}
+       next(err);
+    
+     }
+    
+     else{
+      res.set({
+        "Content-Type": "application/msword", 
+        "Content-Disposition": "inline; filename=" + fileName,
+      });
+      res.send(data); 
+     }
+      });
+  } else {
+    var err = {message: "1. Sorry"+'\n'+"2. Not an appropriate file to view.", err:"404"}
+    next(err);
+  
+  }
+
+
+    }else{
+        res.redirect('/adminlogin')
+    }
+})
+
+
+
+app.post('/giveconfi', (req, res)=>{
+    if(req.isAuthenticated()){
+        
+
+var id = req.body.id;
+var names= req.body.names;
+var email = req.body.email;
+var mailOptions = {
+    from: '2019530784.gyanesh@ug.sharda.ac.in',
+    to: email,
+    subject: 'Welcome , You are gladly welcome to ICOE-2022.',
+    text: 'Congrats your fee status has been confirmed now.',
+  };
+User.findByIdAndUpdate(id, {
+    feeStatus:"Confirmed"
+}, {new:true}, (err, doc)=>{
+if(err){
+    var err = {message: "1. Something went wrong."+'\n'+"2. Internal server Error.", err:"500"}
+    next(err)
+}else{
+    transporter.sendMail(mailOptions, function(err, info){
+        if(err){
+            console.log(err+ "amiling")
+            var err = {message: "Something error in sending confirmation mail."+'\n'+"  But you have been registered successfully. "+'\n'+" Try to to login try to login with same credentials.", err:"Sorry!!!"}
+            next(err)
+
+
+             
+        } else {
+
+            req.flash('message', 'Successfully given the payment confirmation to '+ names);
+            res.redirect('/giveconfirmation')
+        }
+      });
+   
+    
+    
+}
+})
+
+    }else{
+        res.redirect('/adminlogin')
+    }
+})
+
+app.all("*", (req, res, next)=>{
+  const err =  {message :"requested URL is not found", err: "404"};
+  err.statusCode = 404;
+  next (err)
+})
+
+if (app.get('env') === 'development') {
+    app.use(function(err, req, res, next) {
+      res.status(err.status || 500);
+      res.render('error', {
+        message: err.message,
+        error: err.err,a1:"Log Out",a2:"/logout",a3:"", a4:"", a5:"", a6:"",
+      });
+    });
+  }
+
+  app.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    res.render('error', {
+      message: err.message,a1:"Log Out",a2:"/logout",a3:"", a4:"", a5:"", a6:"",
+      error: err.err
+    });
+  });
+app.listen(process.env.PORT || 3001,function(){
+    console.log("Server is successfully started at post 3001");
+
+});
+
+
+
+
+
+
+
+
+
+//////iam aaddng the homepage.ejs header//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+<%- include('partials/header3') %>
+
+
+<div class="" style="height: 100px;"></div>
+<div class="container" style="width: 100%;">
+<h2 style="font-weight: bold;text-align: center;">Welcome! <%=name%></h2>
+
+
+</div>
+<%if(suc === false){ console.log(suc)%>
+<p id="reg" class="text-center">Sorry, you have not Registered for any event yet. <br>  Registered Events will appear here. </p>
+<form action="/registerevent"><div class="text-center"><button type="submit" style="border-radius:18px ;background-color: #059862;color: white;text-align: center;" class="btn text-center">Register for ICOE-2022</button></div></form>
+
+
+<%} %>
+<%if(suc === true){ %>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card " >
+          <div class="card-body">
+            <h5 class="card-title">ICOE-2022</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Sucessfully Registered</h6>
+            <%  if(feeStatus==="Confirmed"){  %>
+              <p id="b" style="margin-top: 1%;  " >Fee Status : <span class="badge rounded-pill bg-success" style="color: white;background: green;border-radius: 16px;">Confirmed</span></p>
+              
+      
+                      <%    } else if(feeStatus==="waiting for confirmation") {%> 
+                        <p id="b" style="margin-top: 1%;  " >Fee Status :  <a href="/feeConf"><span class="badge rounded-pill bg-primary" style="color: white;border-radius: 16px; background: grey;">waiting for confirmation</span></a>
+                          <%    } else{%> 
+                            <p id="b" style="margin-top: 1%;  " >Fee Status :  <a href="/feeConf"><span class="badge rounded-pill bg-secondary" style="color: white;border-radius: 16px; background: grey;">submit</span></a>
+                            <%    } %>  
+
+                        <%  if(ab==="Submitted"){  %>
+                          <p id="b" style="    margin-top: -21px;  " >Abstract : <span class="badge rounded-pill bg-success" style="color: white;background: green;border-radius: 16px;"><%=ab%></span></p>
+                          
+                  
+                                  <%    } else{%> 
+                                    <p id="b" style="    margin-top: -21px;  " >Abstract :  <a href="/abstract"><span class="badge rounded-pill bg-secondary" style="color: white;border-radius: 16px; background: grey; background: grey;">submit</span></a>
+                                    <%    } %>  
+
+
+                        <%  if(fp==="Submitted"){  %>
+                          <p id="b" style="    margin-top: -21px;  " >Full Paper : <span class="badge rounded-pill bg-success" style="color: white;background: green;border-radius: 16px;"><%=fp%></span></p>
+                          
+                  
+                                  <%    } else{%> 
+                                    <p id="b" style="    margin-top: -21px;;  " >Full paper :  <a href="/uploadpaper"><span class="badge rounded-pill bg-secondary" style="color: white;border-radius: 16px; background: grey;">submit</span></a>
+                                    <%    } %>  
+
+
+
+
+
+    
+            
+          </div>
+        </div>
+      </div>
+    
+    </div>
+   
+    
+  </div>
+
+ 
+<%} %>
+
+<div class="" style="height: 100px;"></div>
+<%- include("partials/footer")%>
+
+
+
