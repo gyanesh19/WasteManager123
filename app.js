@@ -62,11 +62,6 @@ const conn = mongoose.connection
 
 
 
-// const mongoURI = "mongodb+srv://admin-gyanesh_19:blackhat19@cluster0.jkph9.mongodb.net/myFirstDatabase?retryWrites=true/gyabeshDb";
-
-// // Create mongo connection
-// const conn = mongoose.connect(mongoURI,{useNewUrlParser:true, useUnifiedTopology:true, useFindAndModify: false});
-
 
 mongoose.set("useCreateIndex", true);
 
@@ -250,12 +245,7 @@ app.get("/register", function(req, res, next)
         res.render("register",{a1:"", a2:"", a3:"", a4:"", a5:"", a6:"",});
    
 });
-// app.get("/adminregister", function(req, res, next)
-// {
-   
-//         res.render("adminregister",{a1:"", a2:"", a3:"", a4:"", a5:"", a6:"",});
-   
-// });
+
 app.get("/newhomepage", function(req, res, next)
 {
    
@@ -426,25 +416,6 @@ else{
 
 
 
-// app.post("/adminregister", function(req, res, next){
-    
-//     Admin.register({username: req.body.username}, req.body.password, function(err,user){
-//         if(err){
-//             var err = {message: "Something error registering ."+'\n'+" Please try again later.", err:"Sorry!!!"}
-//             next(err)
-             
-           
-//         }
-//         else{
-//             passport.authenticate("local")(req, res, function(){
-                
-//                 res.redirect("/fj7ebhds7b=7y7823b7823badminpanel");
-
-//             })
-//         }
-//     })
-    
-// });
 
 app.post("/login",function(req, res, next){
  var name = req.body.username;
